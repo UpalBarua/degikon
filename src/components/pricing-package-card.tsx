@@ -17,7 +17,7 @@ export function PricingPackageCard({
   return (
     <Card
       classNames={{
-        base: "w-[23rem] h-full p-4 md:p-5 border border-foreground/10",
+        base: "h-full p-4 md:p-5 border bg-content1/65 backdrop-saturate-200 backdrop-blur-xl border-foreground/10",
       }}
     >
       <CardHeader>
@@ -44,8 +44,14 @@ export function PricingPackageCard({
       </CardBody>
       <CardFooter>
         <Link className="w-full" href="/get-quote">
-          <Button color="primary" variant="solid" fullWidth size="lg">
-            <span>Get a Quote</span>
+          <Button
+            color="primary"
+            variant="solid"
+            fullWidth
+            size="lg"
+            className="font-medium"
+          >
+            Get a Quote
           </Button>
         </Link>
       </CardFooter>

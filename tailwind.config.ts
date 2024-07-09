@@ -37,13 +37,13 @@ const config: Config = {
               DEFAULT: "hsl(42, 93%, 3.5%)",
             },
             foreground: {
-              DEFAULT: "hsl(42, 93%, 95%)",
+              DEFAULT: "hsl(42, 93%, 96%)",
             },
             content1: {
               DEFAULT: "hsl(42, 5%, 10%)",
             },
             content2: {
-              DEFAULT: "hsl(42, 5%, 10%)",
+              DEFAULT: "hsl(42, 5%, 15%)",
             },
             primary: {
               "100": "#EFCDFE",

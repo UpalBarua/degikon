@@ -14,8 +14,9 @@ export function ServiceTabs() {
       fullWidth
       classNames={{
         tabList:
-          "border bg-content1 border-foreground/10 overflow-x-scroll w-[calc(100dvw-1rem)] mx-auto md:w-full md:justify-between m-2",
-        tab: "max-w-fit h-10 px-2 md:h-11 md:px-3 scroll-mx-[5rem]",
+          "border rounded-xl bg-content1/65 backdrop-saturate-200 backdrop-blur-xl border-foreground/10 overflow-x-scroll w-[calc(100dvw-1rem)] mx-auto md:w-full md:justify-between m-2",
+        tab: "max-w-fit rounded-xl h-10 px-2 md:h-11 md:px-3 scroll-mx-[5rem]",
+        cursor: "rounded-xl",
       }}
     >
       {services.map(({ category, Icon, services }) => (

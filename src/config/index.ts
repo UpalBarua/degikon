@@ -38,37 +38,43 @@ export const adminNavLinks = [
 
 export const whyChooseUsData = [
   {
-    Icon: Trophy,
+    icon: Trophy,
+    color: "#F9EC12",
     title: "Proven Track Record",
     description:
       "With a track record of delivering measurable results and exceeding client expectations, we're the trusted choice for businesses seeking success in today's competitive landscape.",
   },
   {
-    Icon: Brain,
+    icon: Brain,
+    color: "#F14D34",
     title: "Expertise Across Industries",
     description:
       "Our team of seasoned professionals brings expertise across various industries, ensuring that we understand the unique challenges and opportunities specific to your business niche.",
   },
   {
-    Icon: Wrench,
+    icon: Wrench,
+    color: "#4A7DBF",
     title: "Customized Solutions",
     description:
       "We believe in personalized approaches tailored to each client's needs. Our customized solutions are designed to address your specific goals and drive sustainable growth.",
   },
   {
-    Icon: Lightbulb,
+    icon: Lightbulb,
+    color: "#6BB953",
     title: "Innovative Strategies",
     description:
       "Stay ahead of the curve with our innovative strategies. We continuously adapt to the ever-changing digital landscape, leveraging the latest tools and techniques to maximize your success.",
   },
   {
-    Icon: Scale,
+    icon: Scale,
+    color: "#6CADCB",
     title: "Value for Money",
     description:
       "We offer cost-effective solutions without compromising on quality. Get the most out of your investment with our competitive pricing and exceptional service.",
   },
   {
-    Icon: Headset,
+    icon: Headset,
+    color: "#599792",
     title: "Dedicated Support",
     description:
       "Your success is our priority. Count on us for dedicated support and ongoing assistance, ensuring that you have the resources and guidance you need to thrive in today's dynamic business environment.",

@@ -26,8 +26,8 @@ export function Newsletter() {
       <Card
         classNames={{
           base: [
-            "border border-foreground/10",
-            "gap-6 p-2 items-start !-mb-[14rem] relative z-50 lg:flex-row lg:items-center",
+            "border bg-content1/65 backdrop-saturate-200 backdrop-blur-xl border-foreground/10",
+            "gap-6 p-4 items-start relative z-50 lg:flex-row lg:items-center",
           ],
         }}
       >
@@ -39,11 +39,9 @@ export function Newsletter() {
           width={500}
           className="h-full w-full rounded-2xl object-cover object-center lg:w-[32rem]"
         />
-        <div className="space-y-2 p-2">
+        <div className="space-y-2 pr-10">
           <SectionHeading className="text-start">
-            <span className="lg:text-4xl">Stay Ahead of the Curve </span>
-            <br className="hidden lg:block" />
-            Join Our Exclusive Newsletter!
+            Stay Ahead of the Curve Join Our Exclusive Newsletter!
           </SectionHeading>
           <SectionSubheading className="mx-0 max-w-full px-0 text-start">
             Dive into the latest trends, insights, and tips in the digital world
