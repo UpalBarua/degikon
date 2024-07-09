@@ -2,7 +2,6 @@ import { navLinks } from "@/config";
 import { Button } from "@nextui-org/button";
 import { NavbarContent, NavbarItem } from "@nextui-org/navbar";
 import Link from "next/link";
-import { LegalButton } from "./legal-button";
 import { NavContainer } from "./nav-container";
 
 export function MainNav() {

@@ -67,7 +67,7 @@ export async function TrustedCompanies() {
             }}
             key={company}
           >
-            <div className="flex place-content-center rounded-xl border border-foreground/10 bg-content1 p-6 backdrop-blur-md backdrop-saturate-150">
+            <div className="flex place-content-center rounded-xl border border-foreground/10 bg-content1 bg-content1/65 p-6 backdrop-blur-xl backdrop-saturate-200">
               <Image
                 src={company}
                 alt="trusted company"

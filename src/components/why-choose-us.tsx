@@ -20,12 +20,17 @@ export function WhyChooseUs() {
 
 type ChooseUsCardProps = (typeof whyChooseUsData)[number] & { i: number };
 
-function ChooseUsCard({ Icon, title, description, i }: ChooseUsCardProps) {
+function ChooseUsCard({
+  icon: Icon,
+  color,
+  title,
+  description,
+  i,
+}: ChooseUsCardProps) {
   return (
     <Card
-      isHoverable
       classNames={{
-        base: "group p-2 border border-foreground/10 sm:p-4",
+        base: "group p-2 border bg-content1/65 backdrop-saturate-200 backdrop-blur-xl border-foreground/10 sm:p-4",
       }}
     >
       <CardHeader className="flex flex-col items-start">
@@ -45,8 +50,8 @@ function ChooseUsCard({ Icon, title, description, i }: ChooseUsCardProps) {
             once: true,
           }}
         >
-          <div className="flex aspect-square items-center justify-center rounded-full border border-foreground/10 bg-background p-3.5 transition-colors duration-1000 ease-soft-spring group-hover:bg-primary">
-            <Icon className="h-9 w-9 text-primary transition-colors duration-1000 ease-soft-spring group-hover:text-background" />
+          <div className="flex aspect-square items-center justify-center rounded-xl border border-foreground/10 bg-content2 p-3.5">
+            <Icon style={{ color }} className="size-10" />
           </div>
         </MotionDiv>
       </CardHeader>

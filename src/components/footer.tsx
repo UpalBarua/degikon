@@ -4,11 +4,10 @@ import { Button } from "@nextui-org/button";
 import { Mail, MapPin, PhoneCall } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
-import { FooterContainer } from "./footer-container";
 
 export function Footer() {
   return (
-    <FooterContainer>
+    <footer className="relative z-10 mt-32 space-y-14 border-t border-foreground/10 bg-content1/65 pb-6 pt-12 text-foreground/60 backdrop-blur-xl backdrop-saturate-200">
       <div className="mx-auto grid max-w-7xl grid-cols-1 gap-8 px-4 sm:grid-cols-2 lg:grid-cols-4">
         <div>
           <h3 className="text-[1.8125rem]">Embrace the unknown,</h3>
@@ -103,6 +102,6 @@ export function Footer() {
           </div>
         </div>
       </div>
-    </FooterContainer>
+    </footer>
   );
 }
