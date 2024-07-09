@@ -21,6 +21,7 @@ export function NavContainer({ children }: Readonly<NavContainerProps>) {
       height="3.5rem"
       maxWidth="xl"
       classNames={{
+        base: "bg-content1/65 backdrop-saturate-200 backdrop-blur-xl",
         wrapper: "px-2 sm:px-4 h-[4rem]",
       }}
     >

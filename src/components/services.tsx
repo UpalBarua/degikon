@@ -1,7 +1,7 @@
+import { MotionDiv } from "./motion-div";
 import { ServiceTabs } from "./service-tabs";
 import { SectionHeading } from "./ui/section-heading";
 import { SectionSubheading } from "./ui/section-subheading";
-import { MotionDiv } from "./motion-div";
 
 export function Services() {
   return (
