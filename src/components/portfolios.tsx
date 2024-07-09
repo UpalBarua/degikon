@@ -7,10 +7,10 @@ import { SectionSubheading } from "./ui/section-subheading";
 export async function Portfolios() {
   return (
     <section className="relative flex h-full flex-col items-center justify-center overflow-hidden rounded-[2.5em] bg-primary py-12 text-background">
-      <SectionHeading>Portfolio Spotlight: Witness Our Impact</SectionHeading>
+      <SectionHeading>Showcase of Success: Explore Our Impact</SectionHeading>
       <SectionSubheading className="text-content max-w-3xl">
-        Our accomplishments speak for themselves. Explore our portfolio to learn
-        how we helped customers accomplish goals and exceed expectations
+        Our results speak volumes. Dive into our portfolio to see how we've
+        helped clients achieve their goals and surpass expectations.
       </SectionSubheading>
       <PortfolioCards />
       <Link

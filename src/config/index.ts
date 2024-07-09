@@ -39,39 +39,39 @@ export const adminNavLinks = [
 export const whyChooseUsData = [
   {
     Icon: Trophy,
-    title: "Proven Track Record",
+    title: "Established Success Record",
     description:
-      "With a track record of delivering measurable results and exceeding client expectations, we're the trusted choice for businesses seeking success in today's competitive landscape.",
+      "With a proven history of delivering measurable results and surpassing client expectations, we are the trusted choice for businesses striving for success in today's competitive landscape.",
   },
   {
     Icon: Brain,
-    title: "Expertise Across Industries",
+    title: "Multi-Industry Expertise",
     description:
       "Our team of seasoned professionals brings expertise across various industries, ensuring that we understand the unique challenges and opportunities specific to your business niche.",
   },
   {
     Icon: Wrench,
-    title: "Customized Solutions",
+    title: "Tailored Solutions",
     description:
       "We believe in personalized approaches tailored to each client's needs. Our customized solutions are designed to address your specific goals and drive sustainable growth.",
   },
   {
     Icon: Lightbulb,
-    title: "Innovative Strategies",
+    title: "Innovative Tactics",
     description:
-      "Stay ahead of the curve with our innovative strategies. We continuously adapt to the ever-changing digital landscape, leveraging the latest tools and techniques to maximize your success.",
+      "Remain ahead with our innovative strategies. We dynamically adapt to the evolving digital landscape, leveraging cutting-edge tools and techniques to ensure your success.",
   },
   {
     Icon: Scale,
-    title: "Value for Money",
+    title: "Cost-Effective Excellence",
     description:
       "We offer cost-effective solutions without compromising on quality. Get the most out of your investment with our competitive pricing and exceptional service.",
   },
   {
     Icon: Headset,
-    title: "Dedicated Support",
+    title: "Committed Assistance",
     description:
-      "Your success is our priority. Count on us for dedicated support and ongoing assistance, ensuring that you have the resources and guidance you need to thrive in today's dynamic business environment.",
+      "We are committed to your success. Rely on us for steadfast support and continuous guidance, equipped with the resources needed to excel in today's fast-paced business landscape.",
   },
 ] as const;
 
@@ -95,19 +95,34 @@ export const socialLinks = [
 
 export const employees = [
   {
-    name: "Mohammed Nazmul Hossain",
-    position: "Chief Operating Officer",
-    image: "/images/headshots/nazmul.webp",
-  },
-  {
-    name: "Robin M. Rahman",
-    position: " Chief Executive Officer",
-    image: "/images/headshots/robin.webp",
-  },
-  {
-    name: "Syed Hameem Bin Arshad",
+    name: "Harry Magure",
     position: "Chief Business Officer",
-    image: "/images/headshots/hameem.webp",
+    image: "/images/headshots/about.jpg",
+  },
+  {
+    name: "Harry Magure",
+    position: "Chief Business Officer",
+    image: "/images/headshots/about.jpg",
+  },
+  {
+    name: "Harry Magure",
+    position: "Chief Business Officer",
+    image: "/images/headshots/about.jpg",
+  },
+  {
+    name: "Harry Magure",
+    position: "Chief Business Officer",
+    image: "/images/headshots/about.jpg",
+  },
+  {
+    name: "Harry Magure",
+    position: "Chief Business Officer",
+    image: "/images/headshots/about.jpg",
+  },
+  {
+    name: "Harry Magure",
+    position: "Chief Business Officer",
+    image: "/images/headshots/about.jpg",
   },
 ] as const;
 

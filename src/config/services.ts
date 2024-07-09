@@ -19,27 +19,27 @@ export const services = [
       {
         name: "Advertising Management",
         serviceDescription:
-          "Optimize your ad campaigns with our Advertising Management expertise. We maximize your ROI across various advertising platforms.",
+          "Enhance your ad campaigns with our Advertising Management expertise, maximizing your ROI across diverse advertising platforms.",
       },
       {
         name: "Branding",
         serviceDescription:
-          "Create a lasting brand identity with our Branding services. We develop logos, visual elements, and messaging that set you apart from the competition.",
+          "Establish a memorable brand identity with our comprehensive Branding services. We specialize in creating logos, visual elements, and messaging that distinguish you from competitors.",
       },
       {
         name: "Brand Development",
         serviceDescription:
-          "Grow your brand's influence and reputation through strategic Brand Development. We'll help you define your brand's unique story and purpose.",
+          "Expand your brand's influence and reputation with strategic Brand Development. Let us assist you in crafting your brand's distinctive narrative and purpose.",
       },
       {
         name: "Business Consulting",
         serviceDescription:
-          "Achieve your business goals with our expert Business Consulting. We offer valuable insights and strategies tailored to your industry.",
+          "Reach your business objectives with our expert Business Consulting services. We provide tailored insights and strategies crafted for your specific industry.",
       },
       {
         name: "Lead Generation",
         serviceDescription:
-          "Drive quality leads to your business with our Lead Generation services. We implement targeted campaigns to boost your customer base.",
+          "Attract high-quality leads to your business with our Lead Generation services. We execute targeted campaigns to expand your customer base.",
       },
     ],
   },
