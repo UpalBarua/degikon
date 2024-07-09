@@ -6,10 +6,10 @@ import { SectionSubheading } from "./ui/section-subheading";
 export function Services() {
   return (
     <section id="services" className="scroll-mt-[4rem]">
-      <SectionHeading>Discover Our Offerings</SectionHeading>
+      <SectionHeading>Explore What We Have to Offer</SectionHeading>
       <SectionSubheading>
-        Experience our extensive services to help your business reach new
-        heights
+        Unlock new heights for your business with our extensive range of
+        services.
       </SectionSubheading>
       <MotionDiv
         initial={{

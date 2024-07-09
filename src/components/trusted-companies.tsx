@@ -13,15 +13,15 @@ export async function TrustedCompanies() {
     <section className="grid grid-cols-1 items-center gap-10 lg:grid-cols-2">
       <div className="order-last flex flex-col items-start lg:order-first">
         <SectionHeading className="text-start">
-          Partnering with
+          Collaborating with
           <br />
-          Industry Leaders
+          Top Industry Experts
         </SectionHeading>
         <SectionSubheading className="mx-0 max-w-[30rem] px-0 pb-8 text-start">
-          Our agency is a hub for elite partnerships, trusted by over a hundred
-          leading brands to deliver impactful and innovative collaborations.
-          Discover the synergy of creativity and strategy in our portfolio of
-          successful projects.
+          Our agency is a nexus for premier partnerships, trusted by over a
+          hundred leading brands to create impactful and innovative
+          collaborations. Experience the synergy of creativity and strategy in
+          our portfolio of successful projects.
         </SectionSubheading>
         <MotionDiv
           initial={{

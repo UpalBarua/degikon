@@ -41,11 +41,17 @@ export function Newsletter() {
         />
         <div className="space-y-2 pr-10">
           <SectionHeading className="text-start">
+
+            <span className="lg:text-3xl">
+              Innovating to Lead Industry Standards
+            </span>
+            <br className="hidden lg:block" />
+            Join Our Exclusive Newsletter!
             Stay Ahead of the Curve Join Our Exclusive Newsletter!
           </SectionHeading>
           <SectionSubheading className="mx-0 max-w-full px-0 text-start">
             Dive into the latest trends, insights, and tips in the digital world
-            with <span className="font-semibold">thrivenvision&apos;s </span>
+            with <span className="font-semibold">degikon </span>
             newsletter. Signing up is quick and easy! Just enter your email
             below, and let us bring the future of digital innovation straight to
             you.
