@@ -80,12 +80,8 @@ export function ContactUsForm() {
               {...field}
               classNames={{
                 label: "text-base font-semibold",
-                inputWrapper: [
-                  "bg-background",
-                  "data-[hover=true]:bg-background/40",
-                  "group-data-[focus=true]:bg-background/40",
-                  "border border-foreground/20",
-                ],
+                inputWrapper:
+                  "bg-content1/65 backdrop-saturate-200 backdrop-blur-xl border border-foreground/10 data-[hover=true]:bg-content1/75 group-data-[focus=true]:bg-content1/75",
               }}
             />
           )}
@@ -103,12 +99,8 @@ export function ContactUsForm() {
               {...field}
               classNames={{
                 label: "text-base font-semibold",
-                inputWrapper: [
-                  "bg-background",
-                  "data-[hover=true]:bg-background/40",
-                  "group-data-[focus=true]:bg-background/40",
-                  "border border-foreground/20",
-                ],
+                inputWrapper:
+                  "bg-content1/65 backdrop-saturate-200 backdrop-blur-xl border border-foreground/10 data-[hover=true]:bg-content1/75 group-data-[focus=true]:bg-content1/75",
               }}
             />
           )}
@@ -127,12 +119,8 @@ export function ContactUsForm() {
               {...field}
               classNames={{
                 label: "text-base font-semibold",
-                inputWrapper: [
-                  "bg-background",
-                  "data-[hover=true]:bg-background/40",
-                  "group-data-[focus=true]:bg-background/40",
-                  "border border-foreground/20",
-                ],
+                inputWrapper:
+                  "bg-content1/65 backdrop-saturate-200 backdrop-blur-xl border border-foreground/10 data-[hover=true]:bg-content1/75 group-data-[focus=true]:bg-content1/75",
               }}
             />
           )}
@@ -154,7 +142,6 @@ export function ContactUsForm() {
             type="submit"
             color="primary"
             isLoading={isSubmitting}
-            className="gradient-btn"
           >
             <span>Submit</span>
           </Button>

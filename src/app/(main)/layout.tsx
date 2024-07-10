@@ -14,8 +14,20 @@ export default function MainLayout({ children }: Readonly<MainLayoutProps>) {
         {children}
       </div>
       <Footer />
-      <div className="fixed right-0 top-[-20%] size-[60rem] rounded-full bg-[#497CBE] opacity-30 blur-[10rem]" />
-      <div className="fixed bottom-[-80%] left-0 size-[45rem] rounded-full bg-[#6BB953] opacity-25 blur-[10rem]" />
+      <div
+        style={{
+          background:
+            "linear-gradient(130deg, rgba(247,237,20,1) 0%, rgba(70,125,190,1) 50%)",
+        }}
+        className="fixed right-0 top-[-20%] size-[60rem] rounded-full opacity-40 blur-[10rem]"
+      />
+      <div
+        style={{
+          background:
+            "linear-gradient(297deg, rgba(105,184,82,1) 35%, rgba(75,133,179,1) 70%)",
+        }}
+        className="fixed bottom-[-50%] left-0 size-[45rem] rounded-full bg-[#6BB953] opacity-30 blur-[10rem]"
+      />
     </div>
   );
 }
