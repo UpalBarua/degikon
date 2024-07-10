@@ -163,7 +163,7 @@ function TestimonialCard({
   return (
     <Card
       classNames={{
-        base: "group mb-4 p-2 dark:border bg-content1/65 backdrop-saturate-200 backdrop-blur-xl dark:border-foreground/10 sm:break-inside-avoid sm:p-4 lg:p-5",
+        base: "group mb-4 p-2 dark:border bg-content1/65 backdrop-saturate-200 backdrop-blur-xl dark:border-foreground/5 sm:break-inside-avoid sm:p-4 lg:p-5",
       }}
     >
       <CardBody className="leading-relaxed text-foreground/60">

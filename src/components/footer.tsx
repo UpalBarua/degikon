@@ -7,7 +7,7 @@ import Link from "next/link";
 
 export function Footer() {
   return (
-    <footer className="relative z-10 mt-32 space-y-14 border-t border-foreground/10 bg-content1/65 pb-6 pt-12 text-foreground/60 backdrop-blur-xl backdrop-saturate-200">
+    <footer className="relative z-10 mt-32 space-y-14 border-t border-foreground/5 bg-content1/65 pb-6 pt-12 text-foreground/60 backdrop-blur-xl backdrop-saturate-200">
       <div className="mx-auto grid max-w-7xl grid-cols-1 gap-8 px-4 sm:grid-cols-2 lg:grid-cols-4">
         <div>
           <h3 className="text-[1.8125rem]">Embrace the Unseen,</h3>
@@ -94,7 +94,7 @@ export function Footer() {
                 href={link}
                 key={link}
                 target="_blank"
-                className="rounded-full border border-foreground/10 bg-background p-3 transition-colors hover:text-foreground"
+                className="rounded-full border border-foreground/5 bg-content1/65 p-3 backdrop-blur-xl backdrop-saturate-200 transition-colors hover:text-foreground"
               >
                 <Icon className="h-5 w-5" />
               </a>

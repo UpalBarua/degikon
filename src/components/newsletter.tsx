@@ -26,7 +26,7 @@ export function Newsletter() {
       <Card
         classNames={{
           base: [
-            "border bg-content1/65 backdrop-saturate-200 backdrop-blur-xl border-foreground/10",
+            "border bg-content1/65 backdrop-saturate-200 backdrop-blur-xl border-foreground/5",
             "gap-6 p-4 items-start relative z-50 lg:flex-row lg:items-center",
           ],
         }}

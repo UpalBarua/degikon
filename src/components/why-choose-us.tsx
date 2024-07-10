@@ -30,7 +30,7 @@ function ChooseUsCard({
   return (
     <Card
       classNames={{
-        base: "group p-2 border bg-content1/65 backdrop-saturate-200 backdrop-blur-xl border-foreground/10 sm:p-4",
+        base: "group p-2 border bg-content1/65 backdrop-saturate-200 backdrop-blur-xl border-foreground/5 sm:p-4",
       }}
     >
       <CardHeader className="flex flex-col items-start">
@@ -50,7 +50,7 @@ function ChooseUsCard({
             once: true,
           }}
         >
-          <div className="flex aspect-square items-center justify-center rounded-xl border border-foreground/10 bg-content2 p-3.5">
+          <div className="flex aspect-square items-center justify-center rounded-xl border border-foreground/5 bg-content2/65 p-3.5 backdrop-blur-xl backdrop-saturate-200">
             <Icon style={{ color }} className="size-10" />
           </div>
         </MotionDiv>

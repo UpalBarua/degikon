@@ -15,7 +15,7 @@ export async function Portfolios() {
       <PortfolioCards />
       <Link
         href="/portfolios"
-        className="mt-10 flex items-center gap-x-2 text-xl font-medium text-white transition-colors hover:text-white/60"
+        className="mt-10 flex items-center gap-x-2 text-xl font-medium transition-colors hover:text-background/60"
       >
         <span>View All</span>
         <ChevronRight />

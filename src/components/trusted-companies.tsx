@@ -41,7 +41,12 @@ export async function TrustedCompanies() {
           }}
         >
           <Link href="/contact-us">
-            <Button color="primary" endContent={<ChevronRight />} size="lg">
+            <Button
+              className="font-medium"
+              color="primary"
+              endContent={<ChevronRight />}
+              size="lg"
+            >
               <span>Lets Connect</span>
             </Button>
           </Link>
@@ -67,7 +72,7 @@ export async function TrustedCompanies() {
             }}
             key={company}
           >
-            <div className="flex place-content-center rounded-xl border border-foreground/10 bg-content1 bg-content1/65 p-6 backdrop-blur-xl backdrop-saturate-200">
+            <div className="flex place-content-center rounded-xl border border-foreground/5 bg-content1/65 p-6 backdrop-blur-xl backdrop-saturate-200">
               <Image
                 src={company}
                 alt="trusted company"

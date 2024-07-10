@@ -17,7 +17,7 @@ export function PricingPackageCard({
   return (
     <Card
       classNames={{
-        base: "h-full p-4 md:p-5 border bg-content1/65 backdrop-saturate-200 backdrop-blur-xl border-foreground/10",
+        base: "h-full p-4 md:p-5 border bg-content1/65 backdrop-saturate-200 backdrop-blur-xl border-foreground/5",
       }}
     >
       <CardHeader>
