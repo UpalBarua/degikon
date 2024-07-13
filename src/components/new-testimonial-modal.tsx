@@ -32,8 +32,8 @@ const testimonialFormSchema = z.object({
     .regex(/^[a-zA-Z0-9 ]+$/, {
       message: "Name must only include alphanumeric characters.",
     }),
-  starRating: z.coerce
-    .number()
+  starRating: z
+    .string()
     .min(1, { message: "Ratings must be at least 1 star." })
     .max(5, { message: "Ratings cannot exceed 5 star." }),
 });
@@ -51,7 +51,7 @@ export function NewTestimonialModal() {
     defaultValues: {
       name: "",
       comment: "",
-      starRating: undefined,
+      starRating: "",
     },
   });
 
@@ -67,7 +67,7 @@ export function NewTestimonialModal() {
 
       const newTestimonial = {
         comment,
-        starRating,
+        starRating: Number(starRating),
         customer: {
           name,
           picture: pictureURL,
