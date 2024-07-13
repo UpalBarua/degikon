@@ -45,7 +45,7 @@ export default function DashboardLayout({
   }
 
   return (
-    <main className="relative z-10 h-full min-h-screen dark:bg-background dark:text-foreground/90">
+    <main className="relative z-10 h-full min-h-screen">
       <div className="container mx-auto flex max-w-7xl items-center gap-x-4 px-4 py-4 sm:py-6 md:hidden">
         <Button
           isIconOnly
@@ -59,7 +59,7 @@ export default function DashboardLayout({
         </Button>
         <Link href="/">
           <Image
-            src="/images/named-logo.webp"
+            src="/images/named-logo.png"
             alt="logo"
             height={60}
             width={140}
@@ -70,17 +70,17 @@ export default function DashboardLayout({
       </div>
       <aside
         className={cn(
-          "fixed inset-0 z-10 h-full w-full -translate-x-full bg-background/50 transition-transform duration-500 md:w-[16rem] md:-translate-x-0",
+          "fixed inset-0 z-10 h-full w-full -translate-x-full bg-content1 transition-transform duration-500 md:w-[16rem] md:-translate-x-0",
           {
             "-translate-x-0": isSidebarOpen,
           },
         )}
         onClick={() => setIsSidebarOpen(false)}
       >
-        <nav className="h-full w-[80%] space-y-1 border-r border-foreground/10 bg-background py-8 pl-8 shadow-md md:w-full md:space-y-2">
+        <nav className="h-full w-[80%] space-y-1 border-r border-foreground/10 bg-content1 py-8 pl-8 shadow-md md:w-full md:space-y-2">
           <Link href="/" className="block pb-6">
             <Image
-              src="/images/named-logo.webp"
+              src="/images/named-logo.png"
               alt="logo"
               height={60}
               width={140}

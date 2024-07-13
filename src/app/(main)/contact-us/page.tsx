@@ -17,10 +17,10 @@ export default function ContactUs() {
         <SectionSubheading className="mx-0 px-0 pb-2 text-start">
           Contact Us
         </SectionSubheading>
-        <SectionHeading className="text-start">
+        <SectionHeading className="pl-0 text-start">
           Reach our Customer service!
         </SectionHeading>
-        <p className="leading-relaxed text-foreground/60">
+        <p className="leading-relaxed text-foreground-500">
           We value your connection with us. Our dedicated team is committed to
           providing exceptional service and prompt communication. Whether you
           have questions, feedback, or simply want to get to know us better,
@@ -32,8 +32,7 @@ export default function ContactUs() {
               href={link}
               key={link}
               target="_blank"
-              className="cursor-pointer rounded-full border border-foreground/10
-              bg-background/80 p-3 text-foreground/60 transition-colors hover:bg-primary hover:text-foreground"
+              className="cursor-pointer rounded-full border border-foreground/10 bg-background/80 p-3 text-foreground/60 transition-colors hover:bg-primary hover:text-background"
             >
               <Icon size={26} />
             </a>

@@ -2,13 +2,15 @@ import { SectionHeading } from "@/components/ui/section-heading";
 import { whyChooseUsData } from "@/config";
 import { Card, CardBody, CardHeader } from "@nextui-org/card";
 import { MotionDiv } from "./motion-div";
+import { SectionSubheading } from "./ui/section-subheading";
 
 export function WhyChooseUs() {
   return (
     <section>
-      <SectionHeading className="!pb-[max(3.5dvw,_2rem)]">
-        What Sets Us Apart
-      </SectionHeading>
+      <SectionHeading>What Sets Us Apart</SectionHeading>
+      <SectionSubheading>
+        Explore our customizable packages for your specific needs
+      </SectionSubheading>
       <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
         {whyChooseUsData.map((data, i) => (
           <ChooseUsCard key={data.title} i={i} {...data} />
@@ -43,7 +45,7 @@ function ChooseUsCard({
           }}
           transition={{
             type: "tween",
-            duration: 0.75,
+            duration: 0.5,
             delay: 0.125 * (i + 1),
           }}
           viewport={{
@@ -65,7 +67,7 @@ function ChooseUsCard({
           y: 0,
         }}
         transition={{
-          duration: 0.75,
+          duration: 0.5,
           delay: 0.125 * (i + 1),
         }}
         viewport={{

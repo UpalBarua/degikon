@@ -3,7 +3,7 @@ import { SectionSubheading } from "@/components/ui/section-subheading";
 import { cn } from "@/lib/cn";
 import { TTestimonial } from "@/types";
 import { Avatar } from "@nextui-org/avatar";
-import { Card, CardBody, CardFooter } from "@nextui-org/card";
+import { Card, CardBody, CardHeader } from "@nextui-org/card";
 import { Star, UserRound } from "lucide-react";
 import { MotionDiv } from "./motion-div";
 import {
@@ -166,13 +166,10 @@ function TestimonialCard({
         base: "group mb-4 p-2 dark:border bg-content1/65 backdrop-saturate-200 backdrop-blur-xl dark:border-foreground/5 sm:break-inside-avoid sm:p-4 lg:p-5",
       }}
     >
-      <CardBody className="leading-relaxed text-foreground/60">
-        <p>{comment}</p>
-      </CardBody>
-      <CardFooter className="flex items-center gap-x-4">
+      <CardHeader className="flex items-center gap-x-4">
         <Avatar
           isBordered
-          radius="lg"
+          radius="full"
           size="md"
           src={picture}
           fallback={<UserRound />}
@@ -194,7 +191,10 @@ function TestimonialCard({
               ))}
           </div>
         </div>
-      </CardFooter>
+      </CardHeader>
+      <CardBody className="leading-relaxed text-foreground-500">
+        <p>{comment}</p>
+      </CardBody>
     </Card>
   );
 }

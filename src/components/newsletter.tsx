@@ -40,11 +40,7 @@ export function Newsletter() {
           className="h-full w-full rounded-2xl object-cover object-center lg:w-[32rem]"
         />
         <div className="space-y-2 pr-10">
-          <SectionHeading className="text-start">
-            <span className="lg:text-3xl">
-              Innovating to Lead Industry Standards
-            </span>
-            <br className="hidden lg:block" />
+          <SectionHeading className="pl-0 text-start">
             Join Our Exclusive Newsletter! Stay Ahead of the Curve Join Our
             Exclusive Newsletter!
           </SectionHeading>
@@ -56,10 +52,6 @@ export function Newsletter() {
             you.
           </SectionSubheading>
           <NewsletterForm />
-          <p className="pt-10 leading-relaxed text-foreground/60">
-            Your privacy is paramount to us. We promise to keep your email safe
-            and never spam. Unsubscribe at any time with just a click.
-          </p>
         </div>
       </Card>
     </MotionDiv>

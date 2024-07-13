@@ -12,10 +12,8 @@ export async function TrustedCompanies() {
   return (
     <section className="grid grid-cols-1 items-center gap-10 lg:grid-cols-2">
       <div className="order-last flex flex-col items-start lg:order-first">
-        <SectionHeading className="text-start">
-          Collaborating with
-          <br />
-          Top Industry Experts
+        <SectionHeading className="pl-0 text-start">
+          Collaborating with Top Industry Experts
         </SectionHeading>
         <SectionSubheading className="mx-0 max-w-[30rem] px-0 pb-8 text-start">
           Our agency is a nexus for premier partnerships, trusted by over a
@@ -33,7 +31,7 @@ export async function TrustedCompanies() {
             opacity: 1,
           }}
           transition={{
-            duration: 0.75,
+            duration: 0.5,
             delay: 0.75,
           }}
           viewport={{
@@ -64,7 +62,7 @@ export async function TrustedCompanies() {
               opacity: 1,
             }}
             transition={{
-              duration: 0.75,
+              duration: 0.5,
               delay: 0.125 * (i + 1),
             }}
             viewport={{

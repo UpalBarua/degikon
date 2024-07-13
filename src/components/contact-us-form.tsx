@@ -133,6 +133,7 @@ export function ContactUsForm() {
             onClick={() => {
               reset();
             }}
+            size="lg"
             className="bg-gray-800"
           >
             <span>Clear</span>
@@ -142,6 +143,7 @@ export function ContactUsForm() {
             type="submit"
             color="primary"
             isLoading={isSubmitting}
+            size="lg"
           >
             <span>Submit</span>
           </Button>

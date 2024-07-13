@@ -11,7 +11,7 @@ export async function PricingPackages() {
       <SectionSubheading>
         Explore our customizable packages for your specific needs
       </SectionSubheading>
-      <div className="flex flex-wrap place-content-center gap-6">
+      <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-3">
         {pricingPackages?.map((pricingPackage, i) => (
           <MotionDiv
             initial={{
@@ -23,7 +23,7 @@ export async function PricingPackages() {
               opacity: 1,
             }}
             transition={{
-              duration: 0.75,
+              duration: 0.5,
               delay: 0.125 * (i + 1),
             }}
             viewport={{

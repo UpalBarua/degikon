@@ -8,7 +8,7 @@ export function PricingPackageCard({
   name,
   services,
   features,
-}: TPricingPackage) {
+}: Readonly<TPricingPackage>) {
   const servicesAndFeaturesList = {
     "Services Included": services,
     Features: features,
@@ -21,7 +21,7 @@ export function PricingPackageCard({
       }}
     >
       <CardHeader>
-        <h3 className="text-2xl font-bold tracking-tight">{name}</h3>
+        <h3 className="text-3xl font-medium tracking-tight">{name}</h3>
       </CardHeader>
       <CardBody className="space-y-6">
         {Object.keys(servicesAndFeaturesList).map((key) => (
