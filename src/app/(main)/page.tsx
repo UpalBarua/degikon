@@ -8,6 +8,7 @@ import { Services } from "@/components/services";
 import { Testimonials } from "@/components/testimonials";
 import { TrustedCompanies } from "@/components/trusted-companies";
 import { WhyChooseUs } from "@/components/why-choose-us";
+import { Suspense } from "react";
 
 export default function HomePage() {
   return (
@@ -17,8 +18,12 @@ export default function HomePage() {
       <PricingPackages />
       <WhyChooseUs />
       <TrustedCompanies />
-      <Portfolios />
-      <Testimonials />
+      <Suspense>
+        <Portfolios />
+      </Suspense>
+      <Suspense>
+        <Testimonials />
+      </Suspense>
       <Newsletter />
     </main>
   );

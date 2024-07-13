@@ -1,6 +1,6 @@
 export const dynamic = "force-dynamic";
 
-import { NewsletterTable } from "@/components/wewsletter-table";
+import { NewsletterTable } from "@/components/newsletter-table";
 import { getAllNewsletterEmails } from "@/lib/services";
 import type { Metadata } from "next";
 

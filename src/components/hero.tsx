@@ -2,6 +2,7 @@ import { Button } from "@nextui-org/button";
 import { ChevronRight } from "lucide-react";
 import Image from "next/image";
 import { MotionDiv } from "./motion-div";
+import Link from "next/link";
 
 export function Hero() {
   return (
@@ -42,16 +43,20 @@ export function Hero() {
           transition={{ duration: 0.5, delay: 0.35 }}
         >
           <div className="flex items-center gap-x-4 pt-4">
-            <Button color="primary" size="lg" className="font-medium">
-              Get Started
-            </Button>
-            <Button
-              className="border border-foreground/10 bg-content1/65 font-medium backdrop-blur-xl backdrop-saturate-200"
-              size="lg"
-            >
-              <span>See Our Projects</span>
-              <ChevronRight />
-            </Button>
+            <Link href="/contact-us">
+              <Button color="primary" size="lg" className="font-medium">
+                Get Started
+              </Button>
+            </Link>
+            <Link href="/portfolios">
+              <Button
+                className="border border-foreground/10 bg-content1/65 font-medium backdrop-blur-xl backdrop-saturate-200"
+                size="lg"
+              >
+                <span>See Our Projects</span>
+                <ChevronRight />
+              </Button>
+            </Link>
           </div>
         </MotionDiv>
       </div>

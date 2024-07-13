@@ -19,9 +19,6 @@ export function MainNav() {
             </Button>
           </NavbarItem>
         ))}
-        {/* <NavbarItem> */}
-        {/*   <LegalButton /> */}
-        {/* </NavbarItem> */}
       </NavbarContent>
     </NavContainer>
   );

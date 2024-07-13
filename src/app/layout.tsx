@@ -26,7 +26,6 @@ export default function RootLayout({
         )}
       >
         <Providers>{children}</Providers>
-        {/* <div className="fixed inset-0 bg-[url('/images/bg-gradient.webp')] bg-cover bg-center opacity-50" /> */}
       </body>
     </html>
   );
