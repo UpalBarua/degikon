@@ -38,7 +38,7 @@ export function HeroCategories() {
                       color: "rgba(255,255,255, 0.6)",
                     }
               }
-              transition={{ duration: 0.75, layout: { duration: 0.5 } }}
+              transition={{ duration: 0.5, layout: { duration: 0.5 } }}
             >
               <Icon className="h-6 w-6 text-primary lg:h-7 lg:w-7" />
               <p>{category}</p>

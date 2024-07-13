@@ -36,13 +36,13 @@ export default function DashboardLayout({
     return () => unsubscribe();
   }, []);
 
-  if (isLoading) {
-    return <Loading />;
-  }
-
-  if (!isLoading && !user) {
-    return router.push("/auth");
-  }
+  // if (isLoading) {
+  //   return <Loading />;
+  // }
+  //
+  // if (!isLoading && !user) {
+  //   return router.push("/auth");
+  // }
 
   return (
     <main className="relative z-10 h-full min-h-screen">

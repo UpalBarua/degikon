@@ -39,6 +39,7 @@ export function NewPortfolioModal() {
   const onSubmit = async (newPortfolio: NewPortfolioForm) => {
     try {
       await addNewPortfolioToDB(newPortfolio);
+      console.log("Fired");
       reset();
     } catch (error) {
       console.log(error);

@@ -154,3 +154,13 @@ export const getAllNewsletterEmails = async () => {
 
   return emails;
 };
+
+export const deleteTestimonialById = async (id: string) => {
+  const querySnapshot = await getDoc(doc(db, "testimonials", id));
+  const document = querySnapshot.data();
+
+  const docRef = ref(storage, document?.customer.picture);
+  await deleteObject(docRef);
+
+  await deleteDoc(doc(db, "testimonials", id));
+};
