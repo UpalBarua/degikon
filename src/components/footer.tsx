@@ -52,8 +52,8 @@ export function Footer() {
           <ul className="flex items-center gap-x-2.5">
             <MapPin className="h-5 w-5" />
             <ul>
-              <li>27/20A, Babor Road, Block #F,</li>
-              <li>Mohammadpur, Dhaka, BD.</li>
+              <li>Your Location here</li>
+              <li>Your Location here</li>
             </ul>
           </ul>
         </div>

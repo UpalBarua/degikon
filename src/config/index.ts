@@ -92,17 +92,17 @@ export const whyChooseUsData = [
 export const socialLinks = [
   {
     platform: "Facebook",
-    link: "https://www.facebook.com/thrivenvision",
+    link: "",
     Icon: Facebook,
   },
   {
     platform: "Instagram",
-    link: "https://www.instagram.com/thrivenvision",
+    link: "",
     Icon: Instagram,
   },
   {
     platform: "LinkedIn",
-    link: "https://www.linkedin.com/company/thrivenvision",
+    link: "",
     Icon: Linkedin,
   },
 ] as const;
