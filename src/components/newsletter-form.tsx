@@ -40,7 +40,7 @@ export function NewsletterForm() {
         placeholder="example@email.com"
         classNames={{
           inputWrapper:
-            "bg-background/40 border border-foreground/20 data-[hover=true]:bg-background/60 group-data-[focus=true]:bg-background/60 h-14",
+            "bg-content1/65 border border-foreground/15 data-[hover=true]:bg-content/75 group-data-[focus=true]:bg-content/75 h-14",
           input: [
             "placeholder:text-foreground/60 focus-visible:outline-none",
             "data-[has-start-content=true]:ps-1.5",
@@ -54,7 +54,7 @@ export function NewsletterForm() {
         type="submit"
         size="lg"
         color="primary"
-        className="text-base sm:h-auto"
+        className="text-base font-medium sm:h-auto"
       >
         Subscribe
       </Button>
