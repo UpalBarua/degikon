@@ -31,7 +31,7 @@ export const navLinks = [
 
 export const adminNavLinks = [
   { label: "Portfolios", href: "/admin/portfolios" },
-  { label: "Testimonials", href: "/admin/Testimonials" },
+  { label: "Testimonials", href: "/admin/testimonials" },
   { label: "Newsletter", href: "/admin/newsletter" },
 ] as const;
 
@@ -91,17 +91,17 @@ export const whyChooseUsData = [
 export const socialLinks = [
   {
     platform: "Facebook",
-    link: "https://www.facebook.com/thrivenvision",
+    link: "https://www.facebook.com/degikon",
     Icon: Facebook,
   },
   {
     platform: "Instagram",
-    link: "https://www.instagram.com/thrivenvision",
+    link: "https://www.instagram.com/degikon",
     Icon: Instagram,
   },
   {
     platform: "LinkedIn",
-    link: "https://www.linkedin.com/company/thrivenvision",
+    link: "https://www.linkedin.com/company/degikon",
     Icon: Linkedin,
   },
 ] as const;

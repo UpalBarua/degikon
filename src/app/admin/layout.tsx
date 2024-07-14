@@ -10,7 +10,6 @@ import Image from "next/image";
 import Link from "next/link";
 import { usePathname, useRouter } from "next/navigation";
 import { ReactNode, useEffect, useState } from "react";
-import Loading from "../loading";
 
 type DashboardLayoutProps = {
   children: ReactNode;
@@ -88,13 +87,13 @@ export default function DashboardLayout({
               quality={95}
             />
           </Link>
-          <nav className="flex flex-col items-start gap-y-3 text-lg font-medium text-foreground/60">
+          <nav className="flex flex-col items-start gap-y-3 text-lg text-foreground/60">
             {adminNavLinks.map(({ label, href }) => (
               <Link
                 key={href}
                 href={href}
                 className={cn("transition-colors hover:text-foreground/80", {
-                  "text-foreground": pathname.endsWith(href),
+                  "font-medium text-foreground": pathname.endsWith(href),
                 })}
               >
                 {label}

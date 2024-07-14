@@ -1,6 +1,7 @@
 "use client";
 
 import { addNewTestimonialToDB } from "@/lib/services";
+import { Loader2 } from "lucide-react";
 import { uploadFile } from "@/lib/upload-file";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { Avatar } from "@nextui-org/avatar";
@@ -14,6 +15,7 @@ import {
   useDisclosure,
 } from "@nextui-org/modal";
 import { Camera } from "lucide-react";
+import { useRouter } from "next/navigation";
 import { Fragment, useState } from "react";
 import { Controller, useForm } from "react-hook-form";
 import * as z from "zod";
@@ -44,6 +46,8 @@ export function NewTestimonialModal() {
   const { isOpen, onOpen, onOpenChange } = useDisclosure();
 
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const router = useRouter();
+
   const [pictureFile, setPictureFile] = useState<File | null>(null);
 
   const { control, handleSubmit, reset } = useForm<TestimonialForm>({
@@ -75,7 +79,10 @@ export function NewTestimonialModal() {
       };
 
       await addNewTestimonialToDB(newTestimonial);
+
       reset();
+      onOpenChange();
+      router.refresh();
     } catch (error) {
       console.log(error);
     } finally {
@@ -85,15 +92,19 @@ export function NewTestimonialModal() {
 
   return (
     <Fragment>
-      <Button size="lg" color="primary" onPress={onOpen}>
+      <Button
+        className="font-medium"
+        size="lg"
+        color="primary"
+        onPress={onOpen}
+      >
         Add New Testimonial
       </Button>
       <Modal
         isOpen={isOpen}
         onOpenChange={onOpenChange}
         classNames={{
-          base: "bg-background/90 border border-foreground/10 backdrop-blur-md md:p-4 backdrop-saturate-150",
-          body: "px-2",
+          base: "bg-content1/65 backdrop-saturate-200 backdrop-blur-xl border border-foreground/10",
         }}
       >
         <ModalContent>
@@ -128,7 +139,7 @@ export function NewTestimonialModal() {
                       radius="lg"
                       src={pictureFile ? URL.createObjectURL(pictureFile) : ""}
                       fallback={<Camera className="h-8 w-8" />}
-                      className="h-20 w-20"
+                      className="h-20 w-20 border border-foreground/10 bg-content1/65 backdrop-blur-xl backdrop-saturate-200"
                     />
                   </div>
                   <Controller
@@ -143,6 +154,11 @@ export function NewTestimonialModal() {
                         errorMessage={fieldState.error?.message || ""}
                         isInvalid={fieldState.invalid}
                         {...field}
+                        classNames={{
+                          label: "text-base font-semibold",
+                          inputWrapper:
+                            "bg-content1/65 backdrop-saturate-200 backdrop-blur-xl border border-foreground/10 data-[hover=true]:bg-content1/75 group-data-[focus=true]:bg-content1/75",
+                        }}
                       />
                     )}
                   />
@@ -158,6 +174,11 @@ export function NewTestimonialModal() {
                         errorMessage={fieldState.error?.message || ""}
                         isInvalid={fieldState.invalid}
                         {...field}
+                        classNames={{
+                          label: "text-base font-semibold",
+                          inputWrapper:
+                            "bg-content1/65 backdrop-saturate-200 backdrop-blur-xl border border-foreground/10 data-[hover=true]:bg-content1/75 group-data-[focus=true]:bg-content1/75",
+                        }}
                       />
                     )}
                   />
@@ -174,18 +195,28 @@ export function NewTestimonialModal() {
                         errorMessage={fieldState.error?.message || ""}
                         isInvalid={fieldState.invalid}
                         {...field}
+                        classNames={{
+                          label: "text-base font-semibold",
+                          inputWrapper:
+                            "bg-content1/65 backdrop-saturate-200 backdrop-blur-xl border border-foreground/10 data-[hover=true]:bg-content1/75 group-data-[focus=true]:bg-content1/75",
+                        }}
                       />
                     )}
                   />
-                  <div className="flex items-center justify-end gap-x-2 pt-8">
+                  <div className="flex items-center justify-end gap-x-2 py-6">
                     <Button color="danger" variant="light" onPress={onClose}>
                       Close
                     </Button>
-                    <Button color="primary" type="submit" onPress={onClose}>
+                    <Button color="primary" type="submit">
                       Add Testimonial
                     </Button>
                   </div>
                 </form>
+                {isSubmitting && (
+                  <div className="absolute inset-0 z-10 flex h-full w-full items-center justify-center bg-content1/75">
+                    <Loader2 className="h-[2rem] w-[2rem] animate-spin text-primary" />
+                  </div>
+                )}
               </ModalBody>
             </Fragment>
           )}
