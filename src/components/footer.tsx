@@ -45,7 +45,7 @@ export function Footer() {
             </li>
             <li className="flex items-center gap-x-2.5">
               <Mail className="h-5 w-5" />
-              <span>contact@degikon.com</span>
+              <span>info@degikon.com</span>
             </li>
           </ul>
         </div>

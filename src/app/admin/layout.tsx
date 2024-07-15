@@ -10,6 +10,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { usePathname, useRouter } from "next/navigation";
 import { ReactNode, useEffect, useState } from "react";
+import Loading from "../loading";
 
 type DashboardLayoutProps = {
   children: ReactNode;
@@ -35,13 +36,13 @@ export default function DashboardLayout({
     return () => unsubscribe();
   }, []);
 
-  // if (isLoading) {
-  //   return <Loading />;
-  // }
-  //
-  // if (!isLoading && !user) {
-  //   return router.push("/auth");
-  // }
+  if (isLoading) {
+    return <Loading />;
+  }
+
+  if (!isLoading && !user) {
+    return router.push("/auth");
+  }
 
   return (
     <main className="relative z-10 h-full min-h-screen">
