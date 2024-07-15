@@ -10,7 +10,7 @@ import { TrustedCompaniesSlider } from "./trusted-companies-slider";
 
 export async function TrustedCompanies() {
   return (
-    <section className="grid grid-cols-1 items-center gap-10 lg:grid-cols-2">
+    <section className="container grid grid-cols-1 items-center gap-10 lg:grid-cols-2">
       <div className="order-last flex flex-col items-start lg:order-first">
         <SectionHeading className="pl-0 text-start">
           Collaborating with Top Industry Experts

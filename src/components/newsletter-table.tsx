@@ -44,7 +44,7 @@ export function NewsletterTable({ emails }: Readonly<NewsletterTableProps>) {
             <TableCell>
               <ConfirmationModal
                 onConfirm={async () => {
-                  deleteNewsletterEmailById(email as string);
+                  deleteNewsletterEmailById(id as string);
                 }}
               />
             </TableCell>
