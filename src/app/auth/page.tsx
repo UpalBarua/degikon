@@ -36,7 +36,7 @@ export default function Auth() {
     try {
       setIsLoading(true);
       await signInWithEmailAndPassword(auth, email, password);
-      router.push("/");
+      router.push("/admin");
       reset();
     } catch (error) {
       toast.error("Something went wrong");
@@ -48,19 +48,13 @@ export default function Auth() {
   return (
     <main className="relative z-10 flex min-h-screen items-center justify-center">
       <Card
-        isBlurred
         classNames={{
-          base: [
-            "dark:bg-background/60",
-            "backdrop-blur-md",
-            "backdrop-saturate-150",
-            "p-6 mx-4 border border-foreground/10 sm:break-inside-avoid md:p-8 w-full max-w-[32rem]",
-          ],
+          base: "p-6 mx-4 border border-foreground/10 md:p-8 w-full max-w-[32rem] bg-content1/65 backdrop-saturate-200 backdrop-blur-xl border-foreground/5",
         }}
       >
         <div className="flex items-center justify-center pb-12 pt-4">
           <Image
-            src="/images/named-logo.webp"
+            src="/images/named-logo.png"
             height="80"
             width="250"
             alt="logo"
@@ -100,7 +94,7 @@ export default function Auth() {
                 labelPlacement="outside"
                 label="Password"
                 type="password"
-                placeholder="strong password"
+                placeholder="*********"
                 errorMessage={fieldState.error?.message || ""}
                 isInvalid={fieldState.invalid}
                 {...field}
@@ -122,6 +116,7 @@ export default function Auth() {
             fullWidth
             type="submit"
             disabled={isLoading}
+            className="font-medium"
           >
             Authenticate
           </Button>
