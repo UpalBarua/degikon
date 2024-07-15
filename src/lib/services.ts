@@ -80,3 +80,7 @@ export const getAllNewsletterEmails = async () => {
 
   return emails;
 };
+
+export const deleteNewsletterEmailById = async (id: string) => {
+  return await deleteDoc(doc(db, "newsletter", id));
+};

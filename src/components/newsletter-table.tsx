@@ -11,6 +11,7 @@ import {
 } from "@nextui-org/table";
 import { format } from "date-fns";
 import { ConfirmationModal } from "./confirmation-modal";
+import { deleteNewsletterEmailById } from "@/lib/services";
 
 type NewsletterTableProps = {
   emails: NewsletterEmail[];
@@ -41,7 +42,11 @@ export function NewsletterTable({ emails }: Readonly<NewsletterTableProps>) {
               <h4 className="font-medium">{format(date, "PP")}</h4>
             </TableCell>
             <TableCell>
-              <ConfirmationModal onConfirm={() => console.log(id)} />
+              <ConfirmationModal
+                onConfirm={async () => {
+                  deleteNewsletterEmailById(email as string);
+                }}
+              />
             </TableCell>
           </TableRow>
         ))}
