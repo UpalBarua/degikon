@@ -1,3 +1,5 @@
+export const dynamic = "force-dynamic";
+
 import { ConfirmationModal } from "@/components/confirmation-modal";
 import { NewTestimonialModal } from "@/components/new-testimonial-modal";
 import { TestimonialCard } from "@/components/testimonial-card";

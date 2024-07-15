@@ -33,24 +33,6 @@ export function MobileNav({
             </Link>
           </NavbarMenuItem>
         ))}
-        <NavbarMenuItem>
-          <Link
-            className="w-full text-base"
-            color="foreground"
-            href="/terms-of-service"
-          >
-            Terms of Service
-          </Link>
-        </NavbarMenuItem>
-        <NavbarMenuItem>
-          <Link
-            className="w-full text-base"
-            color="foreground"
-            href="/privacy-policy"
-          >
-            Privacy Policy
-          </Link>
-        </NavbarMenuItem>
       </NavbarMenu>
     </React.Fragment>
   );
