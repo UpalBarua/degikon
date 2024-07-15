@@ -32,14 +32,14 @@ export function Newsletter() {
         }}
       >
         <Image
-          src="/images/newsletter.webp"
+          src="/images/newsletter.jpg"
           alt="newsletter image"
           quality={95}
           height={500}
           width={500}
-          className="h-full w-full rounded-2xl object-cover object-center lg:w-[32rem]"
+          className="absolute left-0 top-0 h-full max-h-[25rem] w-full border-foreground/10 object-cover object-center lg:max-h-full lg:w-auto lg:max-w-[30rem] lg:border-r"
         />
-        <div className="space-y-2 pr-10">
+        <div className="space-y-2 p-4 pt-[25rem] lg:p-8 lg:pl-[32rem]">
           <SectionHeading className="pl-0 text-start">
             Join Our Exclusive Newsletter! Stay Ahead of the Curve Join Our
             Exclusive Newsletter!

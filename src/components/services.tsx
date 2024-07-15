@@ -5,7 +5,7 @@ import { SectionSubheading } from "./ui/section-subheading";
 
 export function Services() {
   return (
-    <section id="services" className="scroll-mt-[4rem]">
+    <section id="services" className="scroll-mt-[5rem]">
       <SectionHeading>Explore What We Have to Offer</SectionHeading>
       <SectionSubheading>
         Unlock new heights for your business with our extensive range of

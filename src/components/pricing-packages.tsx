@@ -6,7 +6,7 @@ import { MotionDiv } from "./motion-div";
 
 export async function PricingPackages() {
   return (
-    <section id="packages" className="scroll-mt-[4rem]">
+    <section id="packages" className="scroll-mt-[5rem]">
       <SectionHeading>Our Packages</SectionHeading>
       <SectionSubheading>
         Explore our customizable packages for your specific needs
