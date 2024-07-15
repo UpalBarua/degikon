@@ -1,14 +1,16 @@
-import { TPricingPackage } from "@/types";
 import { Button } from "@nextui-org/button";
 import { Card, CardBody, CardFooter, CardHeader } from "@nextui-org/card";
 import { Check } from "lucide-react";
 import Link from "next/link";
+import { pricingPackages } from "@/config";
+
+type PricingPackage = (typeof pricingPackages)[number];
 
 export function PricingPackageCard({
   name,
   services,
   features,
-}: TPricingPackage) {
+}: Readonly<PricingPackage>) {
   const servicesAndFeaturesList = {
     "Services Included": services,
     Features: features,
@@ -17,11 +19,11 @@ export function PricingPackageCard({
   return (
     <Card
       classNames={{
-        base: "h-full p-4 md:p-5 border bg-content1/65 backdrop-saturate-200 backdrop-blur-xl border-foreground/10",
+        base: "h-full p-4 md:p-5 border bg-content1/65 backdrop-saturate-200 backdrop-blur-xl border-foreground/5",
       }}
     >
       <CardHeader>
-        <h3 className="text-2xl font-bold tracking-tight">{name}</h3>
+        <h3 className="text-3xl font-medium tracking-tight">{name}</h3>
       </CardHeader>
       <CardBody className="space-y-6">
         {Object.keys(servicesAndFeaturesList).map((key) => (

@@ -1,12 +1,5 @@
 import { db, storage } from "@/firebase/firebase.config";
-import type {
-  NewsletterEmail,
-  TConsultation,
-  TPicture,
-  TPortfolio,
-  TPricingPackage,
-  TTestimonial,
-} from "@/types";
+import type { NewsletterEmail, TPortfolio, TTestimonial } from "@/types";
 import {
   addDoc,
   collection,
@@ -17,54 +10,6 @@ import {
   query,
 } from "firebase/firestore";
 import { deleteObject, ref } from "firebase/storage";
-
-export const addNewPricingPackageToDB = async (
-  newPricingPackage: TPricingPackage,
-) => {
-  return await addDoc(collection(db, "pricing-packages"), newPricingPackage);
-};
-
-export const getPricingPackagesFromDB = async () => {
-  let pricingPackages: TPricingPackage[] = [];
-
-  const q = query(collection(db, "pricing-packages"));
-  const querySnapshot = await getDocs(q);
-
-  querySnapshot.forEach((doc) =>
-    pricingPackages.push({
-      id: doc.id,
-      ...doc.data(),
-    } as TPricingPackage),
-  );
-
-  return pricingPackages;
-};
-
-export const addNewPCompany = async (picture: Omit<TPicture, "id">) => {
-  await addDoc(collection(db, "company"), picture);
-};
-
-export const getAllTrustedCompany = async () => {
-  let company: TPicture[] = [];
-
-  const querySnapshot = await getDocs(collection(db, "company"));
-
-  querySnapshot.forEach((doc) => {
-    company.push({ id: doc.id, ...doc.data() } as TPicture);
-  });
-
-  return company;
-};
-
-export const deleteCompanyById = async (id: string) => {
-  const querySnapshot = await getDoc(doc(db, "company", id));
-  const document = querySnapshot.data();
-
-  const docRef = ref(storage, document?.imageUrl);
-  await deleteObject(docRef);
-
-  await deleteDoc(doc(db, "company", id));
-};
 
 export const addNewTestimonialToDB = async (newTestimonial: TTestimonial) => {
   return await addDoc(collection(db, "testimonials"), newTestimonial);
@@ -86,7 +31,15 @@ export const getTestimonialsFromDB = async () => {
   return testimonials;
 };
 
-// portfolios
+export const deleteTestimonialById = async (id: string) => {
+  const querySnapshot = await getDoc(doc(db, "testimonials", id));
+  const document = querySnapshot.data();
+
+  const docRef = ref(storage, document?.customer.picture);
+  await deleteObject(docRef);
+
+  await deleteDoc(doc(db, "testimonials", id));
+};
 
 export const addNewPortfolioToDB = async (newPortfolio: TPortfolio) => {
   try {
@@ -110,33 +63,6 @@ export const getAllPortfolios = async () => {
 
 export const deletePortfolioById = async (id: string) => {
   return await deleteDoc(doc(db, "portfolios", id));
-};
-
-export const addNewConsultation = async (newConsultation: TConsultation) => {
-  return await addDoc(collection(db, "consultations"), newConsultation);
-};
-
-export const getAllConsultations = async () => {
-  let consultations: TConsultation[] = [];
-
-  const querySnapshot = await getDocs(collection(db, "consultations"));
-
-  querySnapshot.forEach((doc) => {
-    consultations.push({ id: doc.id, ...doc.data() } as TConsultation);
-  });
-
-  // onSnapshot(collection(db, "consulations"), (snapshot) => {
-  //   consulations = [];
-  //   snapshot.docs.forEach((doc) => {
-  //     consulations.push({ id: doc.id, ...doc.data() } as TConsultation);
-  //   });
-  // });
-
-  return consultations;
-};
-
-export const deleteConsultationById = async (id: string) => {
-  return await deleteDoc(doc(db, "consultations", id));
 };
 
 export const addNewsletterEmail = async (newsletterEmail: NewsletterEmail) => {

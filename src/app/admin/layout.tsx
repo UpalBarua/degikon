@@ -10,7 +10,6 @@ import Image from "next/image";
 import Link from "next/link";
 import { usePathname, useRouter } from "next/navigation";
 import { ReactNode, useEffect, useState } from "react";
-import Loading from "../loading";
 
 type DashboardLayoutProps = {
   children: ReactNode;
@@ -36,16 +35,16 @@ export default function DashboardLayout({
     return () => unsubscribe();
   }, []);
 
-  if (isLoading) {
-    return <Loading />;
-  }
-
-  if (!isLoading && !user) {
-    return router.push("/auth");
-  }
+  // if (isLoading) {
+  //   return <Loading />;
+  // }
+  //
+  // if (!isLoading && !user) {
+  //   return router.push("/auth");
+  // }
 
   return (
-    <main className="relative z-10 h-full min-h-screen dark:bg-background dark:text-foreground/90">
+    <main className="relative z-10 h-full min-h-screen">
       <div className="container mx-auto flex max-w-7xl items-center gap-x-4 px-4 py-4 sm:py-6 md:hidden">
         <Button
           isIconOnly
@@ -59,7 +58,7 @@ export default function DashboardLayout({
         </Button>
         <Link href="/">
           <Image
-            src="/images/named-logo.webp"
+            src="/images/named-logo.png"
             alt="logo"
             height={60}
             width={140}
@@ -70,17 +69,17 @@ export default function DashboardLayout({
       </div>
       <aside
         className={cn(
-          "fixed inset-0 z-10 h-full w-full -translate-x-full bg-background/50 transition-transform duration-500 md:w-[16rem] md:-translate-x-0",
+          "fixed inset-0 z-10 h-full w-full -translate-x-full bg-content1 transition-transform duration-500 md:w-[16rem] md:-translate-x-0",
           {
             "-translate-x-0": isSidebarOpen,
           },
         )}
         onClick={() => setIsSidebarOpen(false)}
       >
-        <nav className="h-full w-[80%] space-y-1 border-r border-foreground/10 bg-background py-8 pl-8 shadow-md md:w-full md:space-y-2">
+        <nav className="h-full w-[80%] space-y-1 border-r border-foreground/10 bg-content1 py-8 pl-8 shadow-md md:w-full md:space-y-2">
           <Link href="/" className="block pb-6">
             <Image
-              src="/images/named-logo.webp"
+              src="/images/named-logo.png"
               alt="logo"
               height={60}
               width={140}
@@ -88,13 +87,13 @@ export default function DashboardLayout({
               quality={95}
             />
           </Link>
-          <nav className="flex flex-col items-start gap-y-3 text-lg font-medium text-foreground/60">
+          <nav className="flex flex-col items-start gap-y-3 text-lg text-foreground/60">
             {adminNavLinks.map(({ label, href }) => (
               <Link
                 key={href}
                 href={href}
                 className={cn("transition-colors hover:text-foreground/80", {
-                  "text-foreground": pathname.endsWith(href),
+                  "font-medium text-foreground": pathname.endsWith(href),
                 })}
               >
                 {label}

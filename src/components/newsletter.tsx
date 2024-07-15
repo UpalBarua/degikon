@@ -17,7 +17,7 @@ export function Newsletter() {
         opacity: 1,
       }}
       transition={{
-        duration: 0.75,
+        duration: 0.5,
       }}
       viewport={{
         once: true,
@@ -26,25 +26,21 @@ export function Newsletter() {
       <Card
         classNames={{
           base: [
-            "border bg-content1/65 backdrop-saturate-200 backdrop-blur-xl border-foreground/10",
+            "border bg-content1/65 backdrop-saturate-200 backdrop-blur-xl border-foreground/5",
             "gap-6 p-4 items-start relative z-50 lg:flex-row lg:items-center",
           ],
         }}
       >
         <Image
-          src="/images/newsletter.webp"
+          src="/images/newsletter.jpg"
           alt="newsletter image"
           quality={95}
           height={500}
           width={500}
-          className="h-full w-full rounded-2xl object-cover object-center lg:w-[32rem]"
+          className="absolute left-0 top-0 h-full max-h-[25rem] w-full border-foreground/10 object-cover object-center lg:max-h-full lg:w-auto lg:max-w-[30rem] lg:border-r"
         />
-        <div className="space-y-2 pr-10">
-          <SectionHeading className="text-start">
-            <span className="lg:text-3xl">
-              Innovating to Lead Industry Standards
-            </span>
-            <br className="hidden lg:block" />
+        <div className="space-y-2 p-4 pt-[25rem] lg:p-8 lg:pl-[32rem]">
+          <SectionHeading className="pl-0 text-start">
             Join Our Exclusive Newsletter! Stay Ahead of the Curve Join Our
             Exclusive Newsletter!
           </SectionHeading>
@@ -56,10 +52,6 @@ export function Newsletter() {
             you.
           </SectionSubheading>
           <NewsletterForm />
-          <p className="pt-10 leading-relaxed text-foreground/60">
-            Your privacy is paramount to us. We promise to keep your email safe
-            and never spam. Unsubscribe at any time with just a click.
-          </p>
         </div>
       </Card>
     </MotionDiv>

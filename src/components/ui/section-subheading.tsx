@@ -16,7 +16,7 @@ export function SectionSubheading({
       initial={{ opacity: 0, y: 50 }}
       whileInView={{ opacity: 1, y: 0 }}
       transition={{
-        duration: 0.75,
+        duration: 0.5,
         delay: 0.5,
       }}
       viewport={{
@@ -25,7 +25,7 @@ export function SectionSubheading({
     >
       <h2
         className={cn(
-          "mx-auto text-pretty px-2 pb-[max(3.5dvw,_2rem)] text-center leading-relaxed text-foreground/80 md:text-[1.25rem]",
+          "mx-auto text-pretty px-4 pb-[max(3.5dvw,_2rem)] text-center leading-relaxed text-foreground-500 md:text-[1.25rem]",
           className,
         )}
       >

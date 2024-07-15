@@ -2,8 +2,8 @@ import { SectionHeading } from "@/components/ui/section-heading";
 import { SectionSubheading } from "@/components/ui/section-subheading";
 import { employees } from "@/config";
 import { Card, CardBody, CardHeader } from "@nextui-org/card";
-import Image from "next/image";
 import type { Metadata } from "next";
+import Image from "next/image";
 
 export const metadata: Metadata = {
   title: "About Us | Degikon",
@@ -15,7 +15,7 @@ export default function AboutUs() {
   return (
     <section className="container relative z-10 mx-auto max-w-6xl scroll-m-6 space-y-[min(4rem,8dvw)] px-4 pt-[max(3dvw,0rem)]">
       <div>
-        <SectionHeading className="text-start">About us</SectionHeading>
+        <SectionHeading className="p-0 text-start">About us</SectionHeading>
         <p className="text-[1.25rem] leading-relaxed text-foreground/80">
           <span className="font-semibold">Degikon</span> distinguishes itself as
           more than a digital agency by employing innovators, creators and
@@ -51,17 +51,10 @@ export default function AboutUs() {
           and make your brand stand out in the digital landscape.
         </p>
       </div>
-
       <div className="grid grid-cols-1 gap-4 md:grid-cols-2">
         <Card
-          isBlurred
           classNames={{
-            base: [
-              "dark:bg-background/60",
-              "backdrop-blur-md",
-              "backdrop-saturate-150",
-              "border border-foreground/10 p-4",
-            ],
+            base: "h-full p-4 md:p-5 border bg-content1/65 backdrop-saturate-200 backdrop-blur-xl border-foreground/5",
           }}
         >
           <CardHeader className="pb-2">
@@ -79,14 +72,8 @@ export default function AboutUs() {
           </CardBody>
         </Card>
         <Card
-          isBlurred
           classNames={{
-            base: [
-              "dark:bg-background/60",
-              "backdrop-blur-md",
-              "backdrop-saturate-150",
-              "border border-foreground/10 p-4",
-            ],
+            base: "h-full p-4 md:p-5 border bg-content1/65 backdrop-saturate-200 backdrop-blur-xl border-foreground/5",
           }}
         >
           <CardHeader className="pb-2">
@@ -127,17 +114,11 @@ type EmployeeProps = (typeof employees)[number];
 function Employee({ name, image, position }: EmployeeProps) {
   return (
     <Card
-      isBlurred
       classNames={{
-        base: [
-          "dark:bg-background/60",
-          "backdrop-blur-md",
-          "backdrop-saturate-150",
-          "border border-foreground/10 p-6",
-        ],
+        base: "h-full border bg-content1/65 backdrop-saturate-200 backdrop-blur-xl border-foreground/5",
       }}
     >
-      <CardBody className="flex items-center justify-center space-y-1 text-center text-[1.25rem]">
+      <CardBody className="p-6 text-start text-[1.25rem]">
         <Image
           src={image}
           alt={name}
@@ -145,8 +126,8 @@ function Employee({ name, image, position }: EmployeeProps) {
           width={200}
           className="w-full rounded-md object-cover object-center"
         />
-        <h3 className="pt-8 font-semibold">{name}</h3>
-        <h4 className="text-foreground/80">{position}</h4>
+        <h3 className="pb-2 pt-6 font-semibold">{name}</h3>
+        <span className="text-foreground/80">{position}</span>
       </CardBody>
     </Card>
   );

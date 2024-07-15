@@ -2,13 +2,15 @@ import { SectionHeading } from "@/components/ui/section-heading";
 import { whyChooseUsData } from "@/config";
 import { Card, CardBody, CardHeader } from "@nextui-org/card";
 import { MotionDiv } from "./motion-div";
+import { SectionSubheading } from "./ui/section-subheading";
 
 export function WhyChooseUs() {
   return (
     <section>
-      <SectionHeading className="!pb-[max(3.5dvw,_2rem)]">
-        What Sets Us Apart
-      </SectionHeading>
+      <SectionHeading>What Sets Us Apart</SectionHeading>
+      <SectionSubheading>
+        Explore our customizable packages for your specific needs
+      </SectionSubheading>
       <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
         {whyChooseUsData.map((data, i) => (
           <ChooseUsCard key={data.title} i={i} {...data} />
@@ -30,7 +32,7 @@ function ChooseUsCard({
   return (
     <Card
       classNames={{
-        base: "group p-2 border bg-content1/65 backdrop-saturate-200 backdrop-blur-xl border-foreground/10 sm:p-4",
+        base: "group p-2 border bg-content1/65 backdrop-saturate-200 backdrop-blur-xl border-foreground/5 sm:p-4",
       }}
     >
       <CardHeader className="flex flex-col items-start">
@@ -43,14 +45,14 @@ function ChooseUsCard({
           }}
           transition={{
             type: "tween",
-            duration: 0.75,
+            duration: 0.5,
             delay: 0.125 * (i + 1),
           }}
           viewport={{
             once: true,
           }}
         >
-          <div className="flex aspect-square items-center justify-center rounded-xl border border-foreground/10 bg-content2 p-3.5">
+          <div className="flex aspect-square items-center justify-center rounded-xl border border-foreground/5 bg-content2/65 p-3.5 backdrop-blur-xl backdrop-saturate-200">
             <Icon style={{ color }} className="size-10" />
           </div>
         </MotionDiv>
@@ -65,7 +67,7 @@ function ChooseUsCard({
           y: 0,
         }}
         transition={{
-          duration: 0.75,
+          duration: 0.5,
           delay: 0.125 * (i + 1),
         }}
         viewport={{

@@ -3,6 +3,7 @@ import { Button } from "@nextui-org/button";
 import { NavbarContent, NavbarItem } from "@nextui-org/navbar";
 import Link from "next/link";
 import { NavContainer } from "./nav-container";
+import { PhoneForwarded } from "lucide-react";
 
 export function MainNav() {
   return (
@@ -19,9 +20,14 @@ export function MainNav() {
             </Button>
           </NavbarItem>
         ))}
-        {/* <NavbarItem> */}
-        {/*   <LegalButton /> */}
-        {/* </NavbarItem> */}
+        <NavbarItem>
+          <a href="tel:01789012349">
+            <Button color="primary" className="font-medium">
+              <PhoneForwarded className="size-4" />
+              <span>01789012349</span>
+            </Button>
+          </a>
+        </NavbarItem>
       </NavbarContent>
     </NavContainer>
   );

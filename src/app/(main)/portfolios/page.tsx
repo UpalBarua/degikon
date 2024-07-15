@@ -6,9 +6,9 @@ import { getAllPortfolios } from "@/lib/services";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Portfolios | thrivenvision",
+  title: "Portfolios | degikon",
   description:
-    "Explore thrivenvision's digital expertise! See our portfolio showcasing exceptional work across various services.",
+    "Explore degikon's digital expertise! See our portfolio showcasing exceptional work across various services.",
 };
 
 export default async function Portfolios() {
