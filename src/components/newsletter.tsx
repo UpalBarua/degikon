@@ -15,7 +15,7 @@ export function Newsletter() {
       }}
     >
       <Image
-        src="/images/newsletter.jpg"
+        src="/images/newsLater.jpg"
         alt="newsletter image"
         quality={95}
         height={500}
