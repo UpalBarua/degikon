@@ -9,41 +9,6 @@ import {
 
 export const services = [
   {
-    id: "771846b14a024",
-    category: "Brand Building",
-    categoryDescription:
-      "Strengthen your brand identity with our expertise in Branding, Advertising Management, Development, Consulting, and Lead Generation.",
-    Icon: Store,
-    categoryImage: "/images/services/brand-building.webp",
-    services: [
-      {
-        name: "Advertising Management",
-        serviceDescription:
-          "Enhance your ad campaigns with our Advertising Management expertise, maximizing your ROI across diverse advertising platforms.",
-      },
-      {
-        name: "Branding",
-        serviceDescription:
-          "Establish a memorable brand identity with our comprehensive Branding services. We specialize in creating logos, visual elements, and messaging that distinguish you from competitors.",
-      },
-      {
-        name: "Brand Development",
-        serviceDescription:
-          "Expand your brand's influence and reputation with strategic Brand Development. Let us assist you in crafting your brand's distinctive narrative and purpose.",
-      },
-      {
-        name: "Business Consulting",
-        serviceDescription:
-          "Reach your business objectives with our expert Business Consulting services. We provide tailored insights and strategies crafted for your specific industry.",
-      },
-      {
-        name: "Lead Generation",
-        serviceDescription:
-          "Attract high-quality leads to your business with our Lead Generation services. We execute targeted campaigns to expand your customer base.",
-      },
-    ],
-  },
-  {
     id: "cbf5e281a52bc",
     category: "Digital Marketing",
     categoryDescription:
@@ -125,6 +90,41 @@ export const services = [
         name: "Website Design",
         serviceDescription:
           "Create a stunning online presence with our Website Design service. We build user-friendly, visually appealing websites.",
+      },
+    ],
+  },
+  {
+    id: "771846b14a024",
+    category: "Brand Building",
+    categoryDescription:
+      "Strengthen your brand identity with our expertise in Branding, Advertising Management, Development, Consulting, and Lead Generation.",
+    Icon: Store,
+    categoryImage: "/images/services/brand-building.webp",
+    services: [
+      {
+        name: "Advertising Management",
+        serviceDescription:
+          "Enhance your ad campaigns with our Advertising Management expertise, maximizing your ROI across diverse advertising platforms.",
+      },
+      {
+        name: "Branding",
+        serviceDescription:
+          "Establish a memorable brand identity with our comprehensive Branding services. We specialize in creating logos, visual elements, and messaging that distinguish you from competitors.",
+      },
+      {
+        name: "Brand Development",
+        serviceDescription:
+          "Expand your brand's influence and reputation with strategic Brand Development. Let us assist you in crafting your brand's distinctive narrative and purpose.",
+      },
+      {
+        name: "Business Consulting",
+        serviceDescription:
+          "Reach your business objectives with our expert Business Consulting services. We provide tailored insights and strategies crafted for your specific industry.",
+      },
+      {
+        name: "Lead Generation",
+        serviceDescription:
+          "Attract high-quality leads to your business with our Lead Generation services. We execute targeted campaigns to expand your customer base.",
       },
     ],
   },
