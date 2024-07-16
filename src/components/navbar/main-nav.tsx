@@ -1,9 +1,9 @@
 import { navLinks } from "@/config";
 import { Button } from "@nextui-org/button";
 import { NavbarContent, NavbarItem } from "@nextui-org/navbar";
+import { PhoneForwarded } from "lucide-react";
 import Link from "next/link";
 import { NavContainer } from "./nav-container";
-import { PhoneForwarded } from "lucide-react";
 
 export function MainNav() {
   return (
