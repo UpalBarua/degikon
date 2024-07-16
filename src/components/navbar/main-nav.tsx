@@ -22,9 +22,9 @@ export function MainNav() {
         ))}
         <NavbarItem>
           <a href="tel:01789012349">
-            <Button color="primary" className="font-medium">
+            <Button className="bg-[#43ff64] font-medium text-background">
               <PhoneForwarded className="size-4" />
-              <span>01789012349</span>
+              <span>+1(425)7898720</span>
             </Button>
           </a>
         </NavbarItem>
