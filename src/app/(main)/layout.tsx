@@ -28,7 +28,7 @@ export default function MainLayout({ children }: Readonly<MainLayoutProps>) {
             "linear-gradient(297deg, rgba(105,184,82,1) 35%, rgba(75,133,179,1) 70%)",
           animationDuration: "6500ms",
         }}
-        className="fixed bottom-[-50%] left-0 size-[45rem] rounded-full bg-[#6BB953] opacity-25 blur-[10rem]"
+        className="fixed bottom-[-50%] left-0 size-[45rem] animate-spin rounded-full opacity-25 blur-[10rem]"
       />
     </div>
   );

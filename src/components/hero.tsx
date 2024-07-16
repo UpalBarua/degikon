@@ -44,7 +44,10 @@ export function Hero() {
         >
           <div className="flex items-center gap-x-4 pt-4">
             <Link href="/contact-us">
-              <Button color="primary" size="lg" className="font-medium">
+              <Button
+                color="primary"
+                size="lg"
+              >
                 Get Started
               </Button>
             </Link>

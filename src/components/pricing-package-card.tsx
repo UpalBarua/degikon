@@ -36,7 +36,7 @@ export function PricingPackageCard({
                 key as keyof typeof servicesAndFeaturesList
               ].map((service) => (
                 <li key={service} className="flex items-center gap-x-2">
-                  <Check className="h-4 w-4 min-w-4 text-primary" />
+                  <Check className="h-4 w-4 min-w-4 text-[#43ff64]" />
                   <span>{service}</span>
                 </li>
               ))}
