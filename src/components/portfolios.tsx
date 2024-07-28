@@ -6,16 +6,24 @@ import { SectionSubheading } from "./ui/section-subheading";
 
 export async function Portfolios() {
   return (
-    <section className="relative flex h-full flex-col items-center justify-center overflow-hidden rounded-[2.5em] bg-primary py-12 text-background">
-      <SectionHeading>Showcase of Success: Explore Our Impact</SectionHeading>
-      <SectionSubheading className="text-content max-w-3xl">
+    <section
+      style={{
+        background:
+          "linear-gradient(297deg, rgba(105,184,82,1) 10%, rgba(75,133,179,1) 65%)",
+      }}
+      className="relative flex h-full flex-col items-center justify-center overflow-hidden rounded-[2.5em] border border-foreground/5 bg-primary py-14 shadow-lg"
+    >
+      <SectionHeading className="text-background/90">
+        Showcase of Success: Explore Our Impact
+      </SectionHeading>
+      <SectionSubheading className="max-w-3xl text-background/70">
         Our results speak volumes. Dive into our portfolio to see how we've
         helped clients achieve their goals and surpass expectations.
       </SectionSubheading>
       <PortfolioCards />
       <Link
         href="/portfolios"
-        className="mt-10 flex items-center gap-x-2 text-xl font-medium text-white transition-colors hover:text-white/60"
+        className="mt-14 flex items-center gap-x-2 text-xl font-medium text-background/90 transition-colors hover:text-background/60"
       >
         <span>View All</span>
         <ChevronRight />

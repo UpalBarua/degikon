@@ -11,7 +11,9 @@ import {
   ModalHeader,
   useDisclosure,
 } from "@nextui-org/modal";
-import { Fragment } from "react";
+import { Loader2 } from "lucide-react";
+import { useRouter } from "next/navigation";
+import { Fragment, useState } from "react";
 import { Controller, useForm } from "react-hook-form";
 import * as z from "zod";
 
@@ -28,6 +30,8 @@ type NewPortfolioForm = z.infer<typeof newPortfolioForm>;
 
 export function NewPortfolioModal() {
   const { isOpen, onOpen, onOpenChange } = useDisclosure();
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const router = useRouter();
 
   const { control, handleSubmit, reset } = useForm<NewPortfolioForm>({
     resolver: zodResolver(newPortfolioForm),
@@ -38,31 +42,40 @@ export function NewPortfolioModal() {
 
   const onSubmit = async (newPortfolio: NewPortfolioForm) => {
     try {
+      setIsSubmitting(true);
       await addNewPortfolioToDB(newPortfolio);
       reset();
+      onOpenChange();
+      router.refresh();
     } catch (error) {
       console.log(error);
+    } finally {
+      setIsSubmitting(false);
     }
   };
 
   return (
     <Fragment>
-      <Button size="lg" color="primary" onPress={onOpen}>
+      <Button
+        className="font-medium"
+        size="lg"
+        color="primary"
+        onPress={onOpen}
+      >
         Add New Portfolio
       </Button>
       <Modal
         isOpen={isOpen}
         onOpenChange={onOpenChange}
         classNames={{
-          base: "bg-background/90 border border-foreground/10 backdrop-blur-md md:p-4 backdrop-saturate-150",
-          body: "px-2",
+          base: "bg-content1/65 backdrop-saturate-200 backdrop-blur-xl border border-foreground/10",
         }}
       >
         <ModalContent>
           {(onClose: () => void) => (
             <Fragment>
               <ModalHeader className="flex flex-col gap-1">
-                Add New Portfolio
+                New Portfolio
               </ModalHeader>
               <ModalBody>
                 <form onSubmit={handleSubmit(onSubmit)}>
@@ -79,25 +92,26 @@ export function NewPortfolioModal() {
                         {...field}
                         classNames={{
                           label: "text-base font-semibold",
-                          inputWrapper: [
-                            "bg-background",
-                            "data-[hover=true]:bg-background/40",
-                            "group-data-[focus=true]:bg-background/40",
-                            "border border-foreground/20",
-                          ],
+                          inputWrapper:
+                            "bg-content1/65 backdrop-saturate-200 backdrop-blur-xl border border-foreground/10 data-[hover=true]:bg-content1/75 group-data-[focus=true]:bg-content1/75",
                         }}
                       />
                     )}
                   />
-                  <div className="flex items-center justify-end gap-x-2 pt-8">
+                  <div className="flex items-center justify-end gap-x-2 py-6">
                     <Button color="danger" variant="light" onPress={onClose}>
                       Close
                     </Button>
-                    <Button color="primary" type="submit" onPress={onClose}>
+                    <Button color="primary" type="submit">
                       Add Portfolio
                     </Button>
                   </div>
                 </form>
+                {isSubmitting && (
+                  <div className="absolute inset-0 z-10 flex h-full w-full items-center justify-center bg-content1/75">
+                    <Loader2 className="h-[2rem] w-[2rem] animate-spin text-primary" />
+                  </div>
+                )}
               </ModalBody>
             </Fragment>
           )}

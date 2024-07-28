@@ -6,6 +6,8 @@ import {
 } from "@nextui-org/navbar";
 import Link from "next/link";
 import * as React from "react";
+import { PhoneForwarded } from "lucide-react";
+import { Button } from "@nextui-org/button";
 
 type MobileNavProps = {
   isMenuOpen: boolean;
@@ -23,7 +25,7 @@ export function MobileNav({
         className="md:hidden"
       />
       <NavbarMenu
-        className="space-y-2 py-6"
+        className="space-y-2 border border-foreground/10 bg-content1/65 py-6 backdrop-blur-xl backdrop-saturate-200"
         onClick={() => setIsMenuOpen(false)}
       >
         {navLinks.map(({ label, href }) => (
@@ -34,22 +36,12 @@ export function MobileNav({
           </NavbarMenuItem>
         ))}
         <NavbarMenuItem>
-          <Link
-            className="w-full text-base"
-            color="foreground"
-            href="/terms-of-service"
-          >
-            Terms of Service
-          </Link>
-        </NavbarMenuItem>
-        <NavbarMenuItem>
-          <Link
-            className="w-full text-base"
-            color="foreground"
-            href="/privacy-policy"
-          >
-            Privacy Policy
-          </Link>
+          <a href="tel:01789012349">
+            <Button className="bg-[#43ff64] font-medium text-background">
+              <PhoneForwarded className="size-4" />
+              <span>+1(425)7898720</span>
+            </Button>
+          </a>
         </NavbarMenuItem>
       </NavbarMenu>
     </React.Fragment>

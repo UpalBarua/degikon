@@ -9,23 +9,50 @@ import {
   ModalHeader,
   useDisclosure,
 } from "@nextui-org/modal";
-import { Trash2 } from "lucide-react";
-import { Fragment } from "react";
+import { Loader2, Trash2 } from "lucide-react";
+import { useRouter } from "next/navigation";
+import { Fragment, useState } from "react";
 
 type ConfirmationModalProps = {
-  onConfirm(): void;
+  onConfirm(): Promise<void>;
 };
 
 export function ConfirmationModal({
   onConfirm,
 }: Readonly<ConfirmationModalProps>) {
   const { isOpen, onOpen, onOpenChange } = useDisclosure();
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const router = useRouter();
+
+  async function handleConfirm() {
+    try {
+      setIsSubmitting(true);
+
+      await onConfirm();
+      onOpenChange();
+
+      router.refresh();
+    } catch (error) {
+      console.log(error);
+    } finally {
+      setIsSubmitting(false);
+    }
+  }
 
   return (
     <Fragment>
-      <Button onPress={onOpen} fullWidth size="lg" className="mt-4">
-        <Trash2 className="h-5 w-5" />
-        <span>Delete</span>
+      <Button onPress={onOpen} fullWidth size="lg">
+        {isSubmitting ? (
+          <>
+            <Loader2 className="h-5 w-5 animate-spin" />
+            <span>Deleting</span>
+          </>
+        ) : (
+          <>
+            <Trash2 className="h-5 w-5" />
+            <span>Delete</span>
+          </>
+        )}
       </Button>
       <Modal size="sm" isOpen={isOpen} onOpenChange={onOpenChange}>
         <ModalContent>
@@ -37,13 +64,7 @@ export function ConfirmationModal({
                 <Button color="danger" variant="light" onPress={onClose}>
                   Cancel
                 </Button>
-                <Button
-                  color="primary"
-                  onPress={() => {
-                    onConfirm();
-                    onClose();
-                  }}
-                >
+                <Button type="button" onPress={handleConfirm}>
                   Confirm
                 </Button>
               </ModalFooter>

@@ -15,7 +15,6 @@ export function NavContainer({ children }: Readonly<NavContainerProps>) {
 
   return (
     <Navbar
-      shouldHideOnScroll={false}
       isMenuOpen={isMenuOpen}
       onMenuOpenChange={setIsMenuOpen}
       height="3.5rem"

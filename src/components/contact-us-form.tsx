@@ -133,7 +133,8 @@ export function ContactUsForm() {
             onClick={() => {
               reset();
             }}
-            className="bg-gray-800"
+            size="lg"
+            className="border border-foreground/10 bg-content1/65 backdrop-blur-xl backdrop-saturate-200 data-[hover=true]:bg-content1/75 group-data-[focus=true]:bg-content1/75"
           >
             <span>Clear</span>
           </Button>
@@ -142,6 +143,7 @@ export function ContactUsForm() {
             type="submit"
             color="primary"
             isLoading={isSubmitting}
+            size="lg"
           >
             <span>Submit</span>
           </Button>

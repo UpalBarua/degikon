@@ -13,7 +13,7 @@ export function SectionHeading({ children, className }: SectionHeadingProps) {
       initial={{ opacity: 0, y: 25 }}
       whileInView={{ opacity: 1, y: 0 }}
       transition={{
-        duration: 0.75,
+        duration: 0.5,
       }}
       viewport={{
         once: true,
@@ -21,7 +21,7 @@ export function SectionHeading({ children, className }: SectionHeadingProps) {
     >
       <h1
         className={cn(
-          "pb-2 text-center text-[clamp(1.5rem,_3.5vw+1rem,_2.8125rem)] font-semibold capitalize leading-snug tracking-tight md:pb-4",
+          "text-pretty px-4 pb-2 text-center text-[clamp(1.5rem,_4.5vw+1rem,_2.8125rem)] font-extrabold capitalize leading-snug tracking-tight md:pb-4",
           className,
         )}
       >

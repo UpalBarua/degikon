@@ -7,16 +7,23 @@ import Link from "next/link";
 
 export function Footer() {
   return (
-    <footer className="relative z-10 mt-32 space-y-14 border-t border-foreground/10 bg-content1/65 pb-6 pt-12 text-foreground/60 backdrop-blur-xl backdrop-saturate-200">
+    <footer className="relative z-10 mt-32 space-y-14 border-t border-foreground/5 bg-content1/65 pb-8 pt-14 text-foreground/60 backdrop-blur-xl backdrop-saturate-200">
       <div className="mx-auto grid max-w-7xl grid-cols-1 gap-8 px-4 sm:grid-cols-2 lg:grid-cols-4">
-        <div>
-          <h3 className="text-[1.8125rem]">Embrace the Unseen,</h3>
-          <h4 className="pb-6 text-xl capitalize text-foreground">
-            Let Dreams Soar High
-          </h4>
-          <Link href="/get-quote">
-            <Button color="primary" size="lg">
-              <span>Hire us now</span>
+        <div className="space-y-2">
+          <Image
+            src="/images/named-logo.png"
+            alt="logo"
+            height={80}
+            width={160}
+            className="pb-6 pt-8 lg:p-0"
+          />
+          <p>Copyright © 2024 degikon.com</p>
+          <Link href="/contact-us">
+            <Button
+              size="lg"
+              className="mt-6 bg-[#43ff64] font-medium text-background"
+            >
+              <span>Get In Touch</span>
             </Button>
           </Link>
         </div>
@@ -37,11 +44,11 @@ export function Footer() {
           <ul className="space-y-2">
             <li className="flex items-center gap-x-2.5">
               <PhoneCall className="h-5 w-5" />
-              <span>+88012345678</span>
+              <span>+1(425)7898720</span>
             </li>
             <li className="flex items-center gap-x-2.5">
               <Mail className="h-5 w-5" />
-              <span>contact@degikon.com</span>
+              <span>info@degikon.com</span>
             </li>
           </ul>
         </div>
@@ -51,55 +58,42 @@ export function Footer() {
           </h1>
           <ul className="flex items-center gap-x-2.5">
             <MapPin className="h-5 w-5" />
-            <ul>
-              <li>27/20A, Babor Road, Block #F,</li>
-              <li>Mohammadpur, Dhaka, BD.</li>
-            </ul>
+            <address>Seattle, Washington, 98087</address>
           </ul>
         </div>
       </div>
       <div className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-2 px-4 lg:flex-row lg:gap-0">
-        <Image
-          src="/images/named-logo.png"
-          alt="logo"
-          height={80}
-          width={160}
-          className="pb-6 pt-8 lg:p-0"
-        />
-        <p>Copyright © 2024 degikon.com</p>
-        <div className="flex flex-col items-center gap-4 lg:flex-row">
-          <div className="flex flex-col items-center gap-1 sm:flex-row md:gap-4">
-            <Link
-              href="/privacy-policy"
-              className="underline-offset-2 transition-colors hover:text-foreground hover:underline"
+        <div className="flex flex-col items-center gap-1 sm:flex-row md:gap-4">
+          <Link
+            href="/privacy-policy"
+            className="underline-offset-2 transition-colors hover:text-foreground hover:underline"
+          >
+            Privacy Policy
+          </Link>
+          <Link
+            href="/terms-of-service"
+            className="underline-offset-2 transition-colors hover:text-foreground hover:underline"
+          >
+            Terms of Service
+          </Link>
+          <Link
+            href="/contact-us"
+            className="underline-offset-2 transition-colors hover:text-foreground hover:underline"
+          >
+            Support
+          </Link>
+        </div>
+        <div className="flex items-center gap-2">
+          {socialLinks.map(({ Icon, link }) => (
+            <a
+              href={link}
+              key={link}
+              target="_blank"
+              className="rounded-full border border-foreground/5 bg-content1/65 p-3 backdrop-blur-xl backdrop-saturate-200 transition-colors hover:text-foreground"
             >
-              Privacy Policy
-            </Link>
-            <Link
-              href="/terms-of-service"
-              className="underline-offset-2 transition-colors hover:text-foreground hover:underline"
-            >
-              Terms of Service
-            </Link>
-            <Link
-              href="/contact-us"
-              className="underline-offset-2 transition-colors hover:text-foreground hover:underline"
-            >
-              Support
-            </Link>
-          </div>
-          <div className="flex items-center gap-2">
-            {socialLinks.map(({ Icon, link }) => (
-              <a
-                href={link}
-                key={link}
-                target="_blank"
-                className="rounded-full border border-foreground/10 bg-background p-3 transition-colors hover:text-foreground"
-              >
-                <Icon className="h-5 w-5" />
-              </a>
-            ))}
-          </div>
+              <Icon className="h-5 w-5" />
+            </a>
+          ))}
         </div>
       </div>
     </footer>
