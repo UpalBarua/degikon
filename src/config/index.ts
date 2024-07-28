@@ -92,7 +92,7 @@ export const whyChooseUsData = [
 export const socialLinks = [
   {
     platform: "Facebook",
-    link: "https://www.facebook.com/thrivenvision",
+    link: "https://www.facebook.com/degikon7?mibextid=LQQJ4d",
     Icon: Facebook,
   },
   {
@@ -109,34 +109,24 @@ export const socialLinks = [
 
 export const employees = [
   {
-    name: "Harry Magure",
-    position: "Chief Business Officer",
-    image: "/images/headshots/about.jpg",
+    name: "Yeasin Asif ",
+    position: "Founder",
+    image: "/images/about/about (1).jpg",
   },
   {
-    name: "Harry Magure",
-    position: "Chief Business Officer",
-    image: "/images/headshots/about.jpg",
+    name: "Joy Podder ",
+    position: "Digital Marketer",
+    image: "/images/about/about (4).jpg",
   },
   {
-    name: "Harry Magure",
-    position: "Chief Business Officer",
-    image: "/images/headshots/about.jpg",
+    name: "Sohel Rana",
+    position: "Digital Marketer",
+    image: "/images/about/about (3).jpg",
   },
   {
-    name: "Harry Magure",
-    position: "Chief Business Officer",
-    image: "/images/headshots/about.jpg",
-  },
-  {
-    name: "Harry Magure",
-    position: "Chief Business Officer",
-    image: "/images/headshots/about.jpg",
-  },
-  {
-    name: "Harry Magure",
-    position: "Chief Business Officer",
-    image: "/images/headshots/about.jpg",
+    name: "Md Rumon Khan ",
+    position: "Web Developer",
+    image: "/images/about/about (2).jpg",
   },
 ] as const;
 
@@ -222,15 +212,15 @@ export const privacyPolicy = [
 ] as const;
 
 export const trustedCompanines = [
-  "/images/brands/logo-0.webp",
-  "/images/brands/logo-1.webp",
-  "/images/brands/logo-2.webp",
-  "/images/brands/logo-3.webp",
-  "/images/brands/logo-4.webp",
-  "/images/brands/logo-5.webp",
-  "/images/brands/logo-6.webp",
-  "/images/brands/logo-7.webp",
-  "/images/brands/logo-8.webp",
+  "/images/brands/logo (1).jpg",
+  "/images/brands/logo (9).jpg",
+  "/images/brands/logo (10).jpg",
+  "/images/brands/logo (2).jpg",
+  "/images/brands/logo (3).jpg",
+  "/images/brands/logo (4).jpg",
+  "/images/brands/logo (5).jpg",
+  "/images/brands/logo (6).jpg",
+  "/images/brands/logo (8).jpg",
 ] as const;
 
 export const pricingPackages = [
