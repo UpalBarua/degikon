@@ -31,10 +31,11 @@ export function Hero() {
           animate={{ x: 0, opacity: 1 }}
           transition={{ duration: 0.5, delay: 0.25 }}
         >
-          <p className="max-w-[35rem] text-lg leading-relaxed text-foreground-600">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit fuga
-            sint omnis ut ratione delectus error eius expedita optio nostrum
-            quia repudiandae laborum, quis molestiae.
+          <p className="max-w-[35rem] text-pretty text-lg leading-relaxed text-foreground-600">
+            We don't just create digital marketing; we engineer it for
+            conversions. Our strategies are designed to attract, engage, and
+            convert your target audience into loyal customers. Let's build a
+            digital powerhouse together.
           </p>
         </MotionDiv>
         <MotionDiv
@@ -44,10 +45,7 @@ export function Hero() {
         >
           <div className="flex items-center gap-x-4 pt-4">
             <Link href="/contact-us">
-              <Button
-                color="primary"
-                size="lg"
-              >
+              <Button color="primary" size="lg">
                 Get Started
               </Button>
             </Link>
