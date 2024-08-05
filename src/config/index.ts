@@ -113,6 +113,11 @@ export const employees = [
     image: "/images/about/about (1).jpg",
   },
   {
+    name: "Yasin Raj",
+    position: "Co-Founder.",
+    image: "/images/about/about (5).jpeg",
+  },
+  {
     name: "Joy Podder ",
     position: "Digital Marketer",
     image: "/images/about/about (4).jpg",
@@ -127,10 +132,14 @@ export const employees = [
     position: "Web Developer",
     image: "/images/about/about (2).jpg",
   },
+  {
+    name: "Mohammed Nazmul Hossain",
+    position: "CBO & Graphic Designer",
+    image: "/images/about/about (6).jpeg",
+  },
 ] as const;
 
 export const trustedCompanines = [
-
   "/images/brands/logo (1).jpg",
   "/images/brands/logo (9).jpg",
   "/images/brands/logo (10).jpg",
