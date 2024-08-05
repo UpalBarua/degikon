@@ -124,7 +124,7 @@ function Employee({ name, image, position }: EmployeeProps) {
           alt={name}
           height={200}
           width={200}
-          className="w-full rounded-md object-cover object-center"
+          className="h-full w-full rounded-md object-cover object-center"
         />
         <h3 className="pb-2 pt-6 font-semibold">{name}</h3>
         <span className="text-foreground/80">{position}</span>
