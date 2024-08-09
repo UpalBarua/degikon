@@ -19,6 +19,7 @@ const contactUsFormSchema = z.object({
       message: "Name must only include alphanumeric characters.",
     }),
   email: z.string().trim().email(),
+  number: z.string(),
   message: z
     .string()
     .trim()
@@ -36,6 +37,7 @@ export function ContactUsForm() {
     defaultValues: {
       name: "",
       email: "",
+      number: "",
       message: "",
     },
   });
@@ -94,6 +96,25 @@ export function ContactUsForm() {
               size="lg"
               label="Email"
               placeholder="Enter your email"
+              errorMessage={fieldState.error?.message || ""}
+              isInvalid={fieldState.invalid}
+              {...field}
+              classNames={{
+                label: "text-base font-semibold",
+                inputWrapper:
+                  "bg-content1/65 backdrop-saturate-200 backdrop-blur-xl border border-foreground/10 data-[hover=true]:bg-content1/75 group-data-[focus=true]:bg-content1/75",
+              }}
+            />
+          )}
+        />
+        <Controller
+          name="number"
+          control={control}
+          render={({ field, fieldState }) => (
+            <Input
+              size="lg"
+              label="number"
+              placeholder="Enter your number"
               errorMessage={fieldState.error?.message || ""}
               isInvalid={fieldState.invalid}
               {...field}
