@@ -8,6 +8,7 @@ import { Send, X } from "lucide-react";
 import { useState } from "react";
 import { Controller, useForm } from "react-hook-form";
 import { z } from "zod";
+import { toast } from "sonner";
 
 const contactUsFormSchema = z.object({
   name: z
@@ -19,7 +20,7 @@ const contactUsFormSchema = z.object({
       message: "Name must only include alphanumeric characters.",
     }),
   email: z.string().trim().email(),
-  number: z.string(),
+  phone: z.string(),
   message: z
     .string()
     .trim()
@@ -37,18 +38,20 @@ export function ContactUsForm() {
     defaultValues: {
       name: "",
       email: "",
-      number: "",
+      phone: "",
       message: "",
     },
   });
 
-  const onSubmit = async ({ name, email }: TContactUsForm) => {
+  const onSubmit = async ({ name, email, phone, message }: TContactUsForm) => {
     try {
       setIsSubmitting(true);
 
       const newMessage = {
         name,
         email,
+        phone,
+        message,
       };
 
       await emailjs.send(
@@ -59,8 +62,10 @@ export function ContactUsForm() {
       );
 
       reset();
+      toast.success("Sent.");
     } catch (error) {
       console.log(error);
+      toast.success("Something went wrong.");
     } finally {
       setIsSubmitting(false);
     }
@@ -108,13 +113,13 @@ export function ContactUsForm() {
           )}
         />
         <Controller
-          name="number"
+          name="phone"
           control={control}
           render={({ field, fieldState }) => (
             <Input
               size="lg"
-              label="number"
-              placeholder="Enter your number"
+              label="Phone"
+              placeholder="Enter your phone no"
               errorMessage={fieldState.error?.message || ""}
               isInvalid={fieldState.invalid}
               {...field}
