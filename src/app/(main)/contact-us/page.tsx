@@ -24,7 +24,7 @@ export default function ContactUs() {
           We value your connection with us. Our dedicated team is committed to
           providing exceptional service and prompt communication. Whether you
           have questions, feedback, or simply want to get to know us better,
-          we’re here for you.
+          we’re here for you.Thank you
         </p>
         <div className="flex items-center gap-x-4 pt-8">
           {socialLinks.map(({ link, Icon }) => (
