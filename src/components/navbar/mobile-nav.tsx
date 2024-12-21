@@ -1,13 +1,13 @@
-import { navLinks } from "@/config";
+import { navLinks, phoneNo } from "@/config";
+import { Button } from "@nextui-org/button";
 import {
   NavbarMenu,
   NavbarMenuItem,
   NavbarMenuToggle,
 } from "@nextui-org/navbar";
+import { PhoneForwarded } from "lucide-react";
 import Link from "next/link";
 import * as React from "react";
-import { PhoneForwarded } from "lucide-react";
-import { Button } from "@nextui-org/button";
 
 type MobileNavProps = {
   isMenuOpen: boolean;
@@ -36,10 +36,10 @@ export function MobileNav({
           </NavbarMenuItem>
         ))}
         <NavbarMenuItem>
-          <a href="tel:01789012349">
+          <a href="tel:14257896792">
             <Button className="bg-[#43ff64] font-medium text-background">
               <PhoneForwarded className="size-4" />
-              <span>+1(425)7898720</span>
+              <span>{phoneNo}</span>
             </Button>
           </a>
         </NavbarMenuItem>

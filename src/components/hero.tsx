@@ -5,7 +5,7 @@ import { MotionDiv } from "./motion-div";
 
 export function Hero() {
   return (
-    <section className="grid grid-cols-1 items-center justify-items-center pt-[5rem] md:pt-[2.5rem] lg:grid-cols-2">
+    <section className="grid grid-cols-1 items-center justify-items-center pt-[2.5rem] md:pt-[2.5rem] lg:grid-cols-2">
       <div className="flex flex-col items-center gap-y-5 text-center lg:items-start lg:text-start">
         <MotionDiv
           initial={{ x: -100, opacity: 0 }}
@@ -64,6 +64,7 @@ export function Hero() {
         initial={{ x: 100, opacity: 0 }}
         animate={{ x: 0, opacity: 1 }}
         transition={{ duration: 0.25, delay: 0.25 }}
+        className="order-first pb-10 lg:order-last lg:pb-0"
       >
         <video controls autoPlay muted className="rounded-2xl">
           <source src="/intro-video.mp4" />

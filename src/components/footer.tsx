@@ -1,4 +1,4 @@
-import { socialLinks } from "@/config";
+import { phoneNo, socialLinks } from "@/config";
 import { services } from "@/config/services";
 import { Button } from "@nextui-org/button";
 import { Mail, MapPin, PhoneCall } from "lucide-react";
@@ -44,7 +44,7 @@ export function Footer() {
           <ul className="space-y-2">
             <li className="flex items-center gap-x-2.5">
               <PhoneCall className="h-5 w-5" />
-              <span>+1(425)7898720</span>
+              <span>{phoneNo}</span>
             </li>
             <li className="flex items-center gap-x-2.5">
               <Mail className="h-5 w-5" />

@@ -1,4 +1,5 @@
 import { navLinks } from "@/config";
+import { phoneNo } from "@/config";
 import { Button } from "@nextui-org/button";
 import { NavbarContent, NavbarItem } from "@nextui-org/navbar";
 import { PhoneForwarded } from "lucide-react";
@@ -21,10 +22,10 @@ export function MainNav() {
           </NavbarItem>
         ))}
         <NavbarItem>
-          <a href="tel:01789012349">
+          <a href="tel:14257896792">
             <Button className="bg-[#43ff64] font-medium text-background">
               <PhoneForwarded className="size-4" />
-              <span>+14257896792</span>
+              <span>{phoneNo}</span>
             </Button>
           </a>
         </NavbarItem>

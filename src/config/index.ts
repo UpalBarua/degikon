@@ -118,6 +118,11 @@ export const employees = [
     image: "/images/about/about (5).jpeg",
   },
   {
+    name: "Tushar Emran",
+    position: "Co-Founder.",
+    image: "/images/about/about (7).jpeg",
+  },
+  {
     name: "Joy Podder ",
     position: "Digital Marketer",
     image: "/images/about/about (4).jpg",
@@ -136,6 +141,11 @@ export const employees = [
     name: "Mohammed Nazmul Hossain",
     position: "CBO & Graphic Designer",
     image: "/images/about/about (6).jpeg",
+  },
+  {
+    name: "Shohagh Chowdhury",
+    position: "Local SEO Expert",
+    image: "/images/about/about (8).jpeg",
   },
 ] as const;
 
@@ -196,3 +206,5 @@ export const pricingPackages = [
     ],
   },
 ];
+
+export const phoneNo = "+14257896792";
