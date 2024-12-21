@@ -1,8 +1,7 @@
 import { Button } from "@nextui-org/button";
 import { ChevronRight } from "lucide-react";
-import Image from "next/image";
-import { MotionDiv } from "./motion-div";
 import Link from "next/link";
+import { MotionDiv } from "./motion-div";
 
 export function Hero() {
   return (
@@ -66,12 +65,9 @@ export function Hero() {
         animate={{ x: 0, opacity: 1 }}
         transition={{ duration: 0.25, delay: 0.25 }}
       >
-        <Image
-          src="/images/hero-illustration.svg"
-          alt="Hero Illustration"
-          height="600"
-          width="600"
-        />
+        <video controls autoPlay muted className="rounded-2xl">
+          <source src="/intro-video.mp4" />
+        </video>
       </MotionDiv>
     </section>
   );

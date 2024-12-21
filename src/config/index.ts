@@ -96,12 +96,12 @@ export const socialLinks = [
   },
   {
     platform: "Instagram",
-    link: "https://www.instagram.com/degikon",
+    link: "https://www.instagram.com/degi_kon/profilecard/?igsh=dzVzaWE1cGxmaDEw",
     Icon: Instagram,
   },
   {
     platform: "LinkedIn",
-    link: "https://www.linkedin.com/company/degikon",
+    link: "https://www.linkedin.com/in/degikon-agency-877528342/",
     Icon: Linkedin,
   },
 ] as const;
